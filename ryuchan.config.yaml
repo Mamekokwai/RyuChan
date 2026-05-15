@@ -119,6 +119,9 @@ music:
     - id: '17957179525'
       name: LiSA
       server: netease
+    - id: '17966019560'
+      name: 告五人
+      server: netease
 github:
   owner: kobaridev
   repo: RyuChan
