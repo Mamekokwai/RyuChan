@@ -9,6 +9,7 @@ import {
   updateRef,
   getRef,
   getCommit,
+  getTreeRecursive,
   type TreeItem
 } from '@/lib/github-client'
 import { fileToBase64NoPrefix } from '@/lib/file-utils'
@@ -151,6 +152,38 @@ export async function saveAlbumsToGitHub(
 
     const commit = await getCommit(token, GITHUB_CONFIG.OWNER, GITHUB_CONFIG.REPO, currentCommitSha)
     const baseTreeSha = commit.tree.sha
+
+    // Detect orphaned photo files — paths under IMAGES_DIR that are no longer
+    // referenced by the current albums data. We add sha:null items to remove
+    // them from the tree when they were deleted in this edit session.
+    toast.loading('🔍 正在检查已删除的照片...', { id: toastId })
+    const currentTreeItems = await getTreeRecursive(token, GITHUB_CONFIG.OWNER, GITHUB_CONFIG.REPO, baseTreeSha)
+
+    const referencedImagePaths = new Set<string>()
+    for (const album of albumsToSave) {
+      for (const photo of album.photos || []) {
+        if (photo.src.startsWith('/image/albums/')) {
+          referencedImagePaths.add(`public${photo.src}`)
+        }
+      }
+    }
+
+    let removedCount = 0
+    for (const item of currentTreeItems) {
+      if (item.type !== 'blob') continue
+      if (!item.path.startsWith(IMAGES_DIR + '/')) continue
+      if (referencedImagePaths.has(item.path)) continue
+      treeItems.push({
+        path: item.path,
+        mode: '100644',
+        type: 'blob',
+        sha: null
+      })
+      removedCount++
+    }
+    if (removedCount > 0) {
+      toast.loading(`🗑️ 发现 ${removedCount} 张已删除的照片，同步清理中...`, { id: toastId })
+    }
 
     toast.loading('🌳 正在构建文件树...', { id: toastId })
     const { sha: newTreeSha } = await createTree(

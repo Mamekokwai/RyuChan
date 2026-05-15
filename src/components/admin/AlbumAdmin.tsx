@@ -7,7 +7,9 @@ import {
   Upload, Link, Camera, Settings, Images, ArrowLeft
 } from 'lucide-react'
 import { useAlbumStore } from '@/stores/album-store'
+import { useAuthStore } from '@/components/write/hooks/use-auth'
 import { detectVariantFromUrl } from '@/lib/photo-utils'
+import { toast, Toaster } from 'sonner'
 import type { AlbumItem, Photo } from '@/data/albums'
 
 const VARIANT_LABELS: Record<string, string> = { '1x1': '1:1', '4x3': '4:3', '4x5': '4:5', '9x16': '9:16' }
@@ -21,6 +23,8 @@ export default function AlbumAdmin() {
     updateAlbum, addPhoto, addPhotos, updatePhoto, deletePhoto, reorderPhotos,
     deleteAlbum, addPendingPhoto,
   } = useAlbumStore()
+
+  const { isAuth } = useAuthStore()
 
   const [activeTab, setActiveTab] = useState<Tab>('info')
   const [isOpen, setIsOpen] = useState(false)
@@ -55,6 +59,15 @@ export default function AlbumAdmin() {
   const handleClose = () => {
     setIsOpen(false)
     setTimeout(() => closeAdmin(), 300)
+  }
+
+  const handleSaveAndSync = async () => {
+    if (!isAuth) {
+      toast.error('请先在页面顶部导入 GitHub 密钥后再保存')
+      return
+    }
+    await saveAlbums()
+    handleClose()
   }
 
   // Album field updaters
@@ -142,7 +155,17 @@ export default function AlbumAdmin() {
   if (!album) return null
 
   return (
-    <AnimatePresence>
+    <>
+      <Toaster
+        richColors
+        position="top-center"
+        toastOptions={{
+          className: 'shadow-xl rounded-2xl border-2 border-primary/20 backdrop-blur-sm',
+          style: { fontSize: '1rem', padding: '14px 20px', borderRadius: '12px', boxShadow: '0 10px 40px rgba(0, 0, 0, 0.15)' },
+          duration: 5000,
+        }}
+      />
+      <AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
@@ -187,12 +210,10 @@ export default function AlbumAdmin() {
                   {deleteConfirm ? '确认删除' : '删除'}
                 </button>
                 <button
-                  onClick={() => { saveAlbums(); handleClose() }}
-                  disabled={isSaving}
+                  onClick={handleClose}
                   className="btn btn-sm btn-primary gap-1.5 shadow-lg shadow-primary/20 font-semibold"
                 >
-                  {isSaving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-                  保存
+                  完成
                 </button>
               </div>
             </div>
@@ -554,7 +575,7 @@ export default function AlbumAdmin() {
                 关闭（不保存）
               </button>
               <button
-                onClick={() => { saveAlbums(); handleClose() }}
+                onClick={handleSaveAndSync}
                 disabled={isSaving}
                 className="btn btn-primary flex-1 gap-2 rounded-xl font-semibold shadow-lg shadow-primary/20"
               >
@@ -569,5 +590,6 @@ export default function AlbumAdmin() {
         </>
       )}
     </AnimatePresence>
+    </>
   )
 }

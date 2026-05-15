@@ -28,7 +28,7 @@ const PolaroidGallery = ({ images, event }: PolaroidGalleryProps) => {
   }, []);
 
   const handleClick = () => {
-    window.location.href = `/photo-wall?event=${encodeURIComponent(event)}`;
+    window.location.href = `/photo-wall/${encodeURIComponent(event)}`;
   };
 
   const cardWidth = 128;
