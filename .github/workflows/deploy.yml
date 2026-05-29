@@ -34,8 +34,8 @@ jobs:
       - name: Build
         run: |
           pnpm prefetch:music
-          astro build
-          pagefind --site dist
+          pnpm astro build
+          pnpm pagefind --site dist
 
       - name: Deploy to server
         run: |
