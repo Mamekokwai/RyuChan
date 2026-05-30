@@ -172,8 +172,16 @@ export function ConfigPage() {
             let token: string | undefined
             try {
                 token = await getAuthToken()
-            } catch (e) {
-                console.log('Public access mode')
+            } catch (e: any) {
+                // APP_ID 未配置或私钥无效时给出明确提示
+                if (e?.message?.includes('APP_ID') || e?.message?.includes('App ID')) {
+                    toast.error('GitHub App ID 未配置，请在 GitHub Actions → Settings → Variables 中设置 PUBLIC_GITHUB_APP_ID', { duration: 8000 })
+                } else if (e?.message?.includes('私钥')) {
+                    // 私钥未设置属于正常未授权状态，不弹 toast
+                    console.log('Public access mode (no private key)')
+                } else {
+                    console.log('Public access mode:', e?.message)
+                }
             }
 
             // 尝试从 GitHub 读取配置

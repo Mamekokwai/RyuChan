@@ -39,7 +39,7 @@ export async function getInstallationId(jwt: string, owner: string, repo: string
 			'X-GitHub-Api-Version': '2022-11-28'
 		}
 	})
-	if (res.status === 401) handle401Error()
+	if (res.status === 401) throw new Error('认证失败：GitHub App ID 或私钥无效，请检查环境变量 PUBLIC_GITHUB_APP_ID 和 PEM 文件是否正确')
 	if (res.status === 422) handle422Error()
 	if (!res.ok) throw new Error(`installation lookup failed: ${res.status}`)
 	const data = await res.json()
@@ -55,7 +55,7 @@ export async function createInstallationToken(jwt: string, installationId: numbe
 			'X-GitHub-Api-Version': '2022-11-28'
 		}
 	})
-	if (res.status === 401) handle401Error()
+	if (res.status === 401) throw new Error('获取 Installation Token 失败：JWT 无效或 App 未安装到此仓库')
 	if (res.status === 422) handle422Error()
 	if (!res.ok) throw new Error(`create token failed: ${res.status}`)
 	const data = await res.json()
@@ -272,30 +272,30 @@ export async function listRepoDir(token: string | null | undefined, owner: strin
 }
 
 export type RecursiveTreeItem = {
-  path: string
-  mode: string
-  type: string
-  sha: string
-  size?: number
-  url?: string
+	path: string
+	mode: string
+	type: string
+	sha: string
+	size?: number
+	url?: string
 }
 
 export async function getTreeRecursive(token: string, owner: string, repo: string, treeSha: string): Promise<RecursiveTreeItem[]> {
-  const res = await fetch(`${GH_API}/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-      Accept: 'application/vnd.github+json',
-      'X-GitHub-Api-Version': '2022-11-28'
-    }
-  })
-  if (res.status === 401) handle401Error()
-  if (res.status === 422) handle422Error()
-  if (!res.ok) throw new Error(`get tree failed: ${res.status}`)
-  const data = await res.json()
-  if (data.truncated) {
-    console.warn('Tree response was truncated — large repo may need pagination')
-  }
-  return data.tree || []
+	const res = await fetch(`${GH_API}/repos/${owner}/${repo}/git/trees/${treeSha}?recursive=1`, {
+		headers: {
+			Authorization: `Bearer ${token}`,
+			Accept: 'application/vnd.github+json',
+			'X-GitHub-Api-Version': '2022-11-28'
+		}
+	})
+	if (res.status === 401) handle401Error()
+	if (res.status === 422) handle422Error()
+	if (!res.ok) throw new Error(`get tree failed: ${res.status}`)
+	const data = await res.json()
+	if (data.truncated) {
+		console.warn('Tree response was truncated — large repo may need pagination')
+	}
+	return data.tree || []
 }
 
 export async function createBlob(

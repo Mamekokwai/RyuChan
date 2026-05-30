@@ -32,6 +32,11 @@ jobs:
       - run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Build
+        env:
+          PUBLIC_GITHUB_OWNER: ${{ vars.PUBLIC_GITHUB_OWNER || 'Mamekokwai' }}
+          PUBLIC_GITHUB_REPO: ${{ vars.PUBLIC_GITHUB_REPO || 'RyuChan' }}
+          PUBLIC_GITHUB_BRANCH: ${{ vars.PUBLIC_GITHUB_BRANCH || 'main' }}
+          PUBLIC_GITHUB_APP_ID: ${{ vars.PUBLIC_GITHUB_APP_ID || '3903517' }}
         run: |
           pnpm prefetch:music
           pnpm astro build

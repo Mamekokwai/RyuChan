@@ -1,7 +1,7 @@
 import { createInstallationToken, getInstallationId, signAppJwt } from './github-client'
 import { GITHUB_CONFIG } from '@/consts'
 import { toast } from 'sonner'
-import { decrypt,encrypt } from './aes256-util'
+import { decrypt, encrypt } from './aes256-util'
 import { useAuthStore } from '@/components/write/hooks/use-auth'
 
 const GITHUB_TOKEN_CACHE_KEY = 'github_token'
@@ -87,7 +87,12 @@ export async function getAuthToken(): Promise<string> {
 		return cachedToken
 	}
 
-	// 2. 获取私钥（从缓存）
+	// 2. 校验 APP_ID 是否已配置
+	if (!GITHUB_CONFIG.APP_ID || GITHUB_CONFIG.APP_ID === '-') {
+		throw new Error('GitHub App ID 未配置。请在构建时设置 PUBLIC_GITHUB_APP_ID 环境变量（GitHub Actions → Settings → Variables 或 .env 文件）')
+	}
+
+	// 3. 获取私钥（从缓存）
 	const privateKey = useAuthStore.getState().privateKey
 	if (!privateKey) {
 		throw new Error('需要先设置私钥。请使用 useAuth().setPrivateKey()')
