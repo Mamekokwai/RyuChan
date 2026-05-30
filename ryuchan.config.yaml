@@ -145,7 +145,7 @@ user:
       - href: https://www.pixiv.net/users/31017441
         ariaLabel: Pixiv
         title: Pixiv
-        svg: si:pixiv
+        svg: simple-icons:pixiv
       - href: https://github.com/Mamekokwai
         ariaLabel: Github
         title: Github
