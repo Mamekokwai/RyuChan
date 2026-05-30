@@ -19,8 +19,8 @@ site:
     height: 70vh
     images:
       - https://tc.alcy.cc/q/20250908/b2d656670551cb9ea6eda7b46b6c8ec0.webp
-  icp: 萌ICP备20261117号
-  icp_link: https://icp.gov.moe/?keyword=20261117
+  icp: 赣ICP备2026002059号
+  icp_link: https://www.beianx.cn/info/772558206316549
   pages:
     home:
       title: RyuChan's Blog
@@ -108,7 +108,7 @@ music:
     - id: '746335449'
       name: 我喜欢的
       server: netease
-    - id: '181019741'
+    - id: '18004279667'
       name: Dreamścape
       server: netease
       type: id
