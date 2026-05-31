@@ -21,6 +21,7 @@ import { CustomSelect } from './components/ui/custom-select'
 
 // Common social icons mapping
 const SOCIAL_PRESETS = [
+<<<<<<< HEAD
     { label: 'Github', value: 'ri:github-line' },
     { label: 'Twitter (X)', value: 'ri:twitter-line' },
     { label: 'Bilibili', value: 'ri:bilibili-line' },
@@ -39,17 +40,37 @@ const SOCIAL_PRESETS = [
     { label: 'Facebook', value: 'ri:facebook-line' },
     { label: 'Instagram', value: 'ri:instagram-line' },
     { label: 'Rednote', value: 'simple-icons:xiaohongshu' },
+=======
+>>>>>>> dev
     { label: 'Baidutieba', value: 'ri:baidu-line' },
+    { label: 'Bilibili', value: 'ri:bilibili-line' },
     { label: 'CloudMusic', value: 'ri:netease-cloud-music-line' },
-    { label: 'Xianyu', value: 'ri:shopping-bag-line' },
-    { label: 'Douban', value: 'ri:douban-line' },
     { label: 'Discord', value: 'ri:discord-line' },
-    { label: 'Spotify', value: 'ri:spotify-line' },
-    { label: 'LinkedIn', value: 'ri:linkedin-box-line' },
-    { label: 'Twitch', value: 'ri:twitch-line' },
+    { label: 'Douban', value: 'ri:douban-line' },
+    { label: 'Douyin', value: 'ri:tiktok-line' },
+    { label: 'Email', value: 'ri:mail-line' },
+    { label: 'Facebook', value: 'ri:facebook-line' },
+    { label: 'Github', value: 'ri:github-line' },
     { label: 'GitLab', value: 'ri:gitlab-line' },
+    { label: 'Instagram', value: 'ri:instagram-line' },
+    { label: 'LinkedIn', value: 'ri:linkedin-box-line' },
     { label: 'Mastodon', value: 'ri:mastodon-line' },
-    { label: 'Other', value: 'ri:link' }
+    { label: 'Other', value: 'ri:link' },
+    { label: 'Pixiv', value: 'simple-icons:pixiv' },
+    { label: 'QQ', value: 'ri:qq-line' },
+    { label: 'Reddit', value: 'ri:reddit-line' },
+    { label: 'Rednote', value: 'simple-icons:xiaohongshu' },
+    { label: 'RSS', value: 'ri:rss-fill' },
+    { label: 'Spotify', value: 'ri:spotify-line' },
+    { label: 'Steam', value: 'ri:steam-line' },
+    { label: 'Telegram', value: 'ri:telegram-line' },
+    { label: 'Twitch', value: 'ri:twitch-line' },
+    { label: 'Twitter (X)', value: 'ri:twitter-line' },
+    { label: 'WeChat', value: 'ri:wechat-fill' },
+    { label: 'Weibo', value: 'ri:weibo-fill' },
+    { label: 'Xianyu', value: 'ri:shopping-bag-line' },
+    { label: 'YouTube', value: 'ri:youtube-line' },
+    { label: 'Zhihu', value: 'ri:zhihu-line' },
 ]
 
 const COMMENT_PROVIDERS = [
