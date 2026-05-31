@@ -15,13 +15,12 @@ import {
     type TreeItem
 } from '@/lib/github-client'
 import yaml from 'js-yaml'
-import { useAuthStore } from './hooks/use-auth'
+imvport { useAuthStore } from './hooks/use-auth'
 import { readFileAsText, fileToBase64NoPrefix } from '@/lib/file-utils'
 import { CustomSelect } from './components/ui/custom-select'
 
 // Common social icons mapping
 const SOCIAL_PRESETS = [
-<<<<<<< HEAD
     { label: 'Github', value: 'ri:github-line' },
     { label: 'Twitter (X)', value: 'ri:twitter-line' },
     { label: 'Bilibili', value: 'ri:bilibili-line' },
@@ -40,8 +39,6 @@ const SOCIAL_PRESETS = [
     { label: 'Facebook', value: 'ri:facebook-line' },
     { label: 'Instagram', value: 'ri:instagram-line' },
     { label: 'Rednote', value: 'simple-icons:xiaohongshu' },
-=======
->>>>>>> dev
     { label: 'Baidutieba', value: 'ri:baidu-line' },
     { label: 'Bilibili', value: 'ri:bilibili-line' },
     { label: 'CloudMusic', value: 'ri:netease-cloud-music-line' },
