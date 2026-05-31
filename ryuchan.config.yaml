@@ -116,6 +116,10 @@ music:
       name: 浮森かや子(精选)
       server: netease
       type: id
+    - id: '18006225413'
+      name: VOTRE CHÂTEAU
+      server: netease
+      type: id
 github:
   owner: kobaridev
   repo: RyuChan
