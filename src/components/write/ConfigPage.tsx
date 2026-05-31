@@ -15,7 +15,7 @@ import {
     type TreeItem
 } from '@/lib/github-client'
 import yaml from 'js-yaml'
-imvport { useAuthStore } from './hooks/use-auth'
+import { useAuthStore } from './hooks/use-auth'
 import { readFileAsText, fileToBase64NoPrefix } from '@/lib/file-utils'
 import { CustomSelect } from './components/ui/custom-select'
 
