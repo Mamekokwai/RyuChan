@@ -187,6 +187,7 @@ user:
 comments:
   enable: true
   type: waline
+  type: waline
   giscus:
     repo: kobaridev/gsc
     repoId: R_kgDOPTM-mA
