@@ -2,7 +2,7 @@
 title: 如何部署 Twikoo 评论系统到自己的服务器
 description: 从零部署 Twikoo 评论系统到自有服务器，涵盖 MongoDB、Docker、Nginx 反代、前端接入全流程。
 pubDate: 2026-05-31T03:07
-image: /images/deploy-twikoo-self-host/2326c6830cf6898a.png
+image: /images/deploy-twikoo-self-host/a19fb13d5c9c9206.png
 draft: false
 tags:
   - tool/comment
@@ -15,7 +15,7 @@ badge: 最新
 
 ## 简介
 
- [Twikoo](https://twikoo.js.org/]) 是一个自托管的静态博客评论系统，后端用 Node.js，数据库用 MongoDB。前端通过一个 JS 脚本嵌入页面。
+ [Twikoo](https://twikoo.js.org) 是一个自托管的静态博客评论系统，后端用 Node.js，数据库用 MongoDB。前端通过一个 JS 脚本嵌入页面。
 
 ## 需要什么
 
