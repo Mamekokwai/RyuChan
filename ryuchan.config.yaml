@@ -134,7 +134,7 @@ github:
 umami:
   enable: true
   baseUrl: https://umami.nywerya.xyz
-  shareId: ''
+  shareId: 7i100yOGibN1Xq3y
   websiteId: b5d3ffed-906a-48f1-ba09-37152b2adacd
   timezone: Asia/Shanghai
 user:
