@@ -133,9 +133,9 @@ github:
   encryptKey: wudishiduomejimo
 umami:
   enable: true
-  baseUrl: https://umami.131714.xyz
-  shareId: jToXL5Z3hnA1gKUw
-  websiteId: 3f9afc6c-f0bd-4734-be15-6d053960d34d
+  baseUrl: https://umami.nywerya.xyz
+  shareId: ''
+  websiteId: b5d3ffed-906a-48f1-ba09-37152b2adacd
   timezone: Asia/Shanghai
 user:
   name: Nywerya
