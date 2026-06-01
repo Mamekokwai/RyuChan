@@ -24,7 +24,7 @@ site:
   pages:
     home:
       title: Nywerya's Blog
-      subtitle:  只要朝着想要前进的方向,风风雨雨都不值得恐惧
+      subtitle: 只要朝着想要前进的方向,风风雨雨都不值得恐惧
       typewriterTexts:
         - 🌸 简单是可靠的前提
         - 🌸 时间是无价的,不要被无意义的事情消耗
@@ -118,6 +118,10 @@ music:
       type: id
     - id: '18006225413'
       name: VOTRE CHÂTEAU
+      server: netease
+      type: id
+    - id: '18008527562'
+      name: Flower of Life
       server: netease
       type: id
 github:
