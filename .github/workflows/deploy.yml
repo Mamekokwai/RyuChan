@@ -29,6 +29,12 @@ jobs:
           restore-keys: |
             pnpm-${{ runner.os }}-
 
+      - name: Cache music data
+        uses: actions/cache@v4
+        with:
+          path: src/data/music.json
+          key: music-data-${{ hashFiles('ryuchan.config.yaml') }}
+
       - run: pnpm install --frozen-lockfile --prefer-offline
 
       - name: Build
