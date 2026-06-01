@@ -101,13 +101,17 @@ anime:
     listId: '8556173'
 music:
   playlists:
+    - id: '746335449'
+      name: 我喜欢的
+      server: netease
+    - id: '18008527562'
+      name: Flower of Life
+      server: netease
+      type: id
     - id: zhoujielun
       name: 周杰伦
       server: netease
       type: custom
-    - id: '746335449'
-      name: 我喜欢的
-      server: netease
     - id: '18004279667'
       name: Dreamścape
       server: netease
@@ -118,10 +122,6 @@ music:
       type: id
     - id: '18006225413'
       name: VOTRE CHÂTEAU
-      server: netease
-      type: id
-    - id: '18008527562'
-      name: Flower of Life
       server: netease
       type: id
 github:
