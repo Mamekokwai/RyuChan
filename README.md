@@ -12,6 +12,7 @@
 [![license](https://badgen.net/github/license/kobaridev/RyuChan)](https://github.com/kobaridev/RyuChan/blob/main/LICENSE)&nbsp;&nbsp;&nbsp;[![release](https://badgen.net/github/release/kobaridev/RyuChan)](https://github.com/kobaridev/RyuChan/releases)  
 
 [**🖥️ Ryuchan Demo**](https://demo.131714.xyz)  
+[**🖥️ Nywerya's blog**](https://blog.nywerya.xyz)
 
 ## 📷 预览  
 
