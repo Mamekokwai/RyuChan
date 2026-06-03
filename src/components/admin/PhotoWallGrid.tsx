@@ -171,6 +171,12 @@ export default function PhotoWallGrid({ initialAlbum, event }: Props) {
                         {photo.description && (
                           <p className="text-base-content/85 text-base font-medium leading-relaxed">{photo.description}</p>
                         )}
+                        {photo.restriction && (
+                          <div className="mt-3 flex items-start gap-2 bg-error/10 border border-error/30 rounded-lg px-3 py-2 text-sm text-error font-semibold">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            <span>{photo.restriction}</span>
+                          </div>
+                        )}
                       </div>
 
                       {isEditMode && (

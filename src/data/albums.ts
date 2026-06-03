@@ -5,6 +5,7 @@ export interface Photo {
     variant: '1x1' | '4x3' | '4x5' | '9x16';
     title?: string;
     description?: string;
+    restriction?: string;
 }
 
 export interface AlbumItem {

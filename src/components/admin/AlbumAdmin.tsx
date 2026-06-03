@@ -570,6 +570,15 @@ export default function AlbumAdmin() {
                                   placeholder="照片描述（可选）"
                                   className="bg-transparent text-sm text-base-content/60 font-medium outline-none border-b border-transparent hover:border-primary/30 focus:border-primary w-full transition-colors"
                                 />
+                                <input
+                                  type="text"
+                                  value={photo.restriction || ''}
+                                  onChange={(e) =>
+                                    canEdit && updatePhoto(album.id, idx, { ...photo, restriction: e.target.value })
+                                  }
+                                  placeholder="版权限制（如：委托稿件，禁止转载）"
+                                  className="bg-transparent text-sm text-error/80 font-medium outline-none border-b border-transparent hover:border-error/30 focus:border-error w-full transition-colors"
+                                />
 
                                 {/* Source URL */}
                                 <div className="text-sm font-medium mt-2 space-y-1.5">
