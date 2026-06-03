@@ -4,7 +4,7 @@ description: >-
   中文 URL 为什么变成 %XX 乱码？从 HTTP 协议的 ASCII 遗产说起，讲透 URL 编码的原理、UTF-8
   字节转换、浏览器何时帮你藏、curl 何时炸、以及实操建议。
 pubDate: 2026-06-03
-image: https://cdn.example.com/Obsidian/发布/注释/URL编码-中文链接变形记-cover.png
+image: https://photo.nywerya.xyz/Obsidian/发布/注释/URL编码-中文链接变形记-cover.png
 draft: false
 tags:
   - url-encoding
@@ -21,6 +21,7 @@ original: "[[笔记/网络与服务器/URL编码-中文链接变形记|URL编码
 Release Platform:
   - blog.nywerya.xyz
 ---
+
 
 # 为什么你输入的链接从「私人/幽香.jpg」变成了「%E7%A7%81%E4%BA%BA/...」
 
