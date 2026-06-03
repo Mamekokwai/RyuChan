@@ -29,7 +29,7 @@ function AdminThumbnail({ src, alt, onLoadDimensions }: { src: string, alt: stri
   }, [src])
 
   return (
-    <div className="w-[100px] h-[100px] rounded-lg overflow-hidden bg-base-300 shrink-0 my-[15px] relative">
+    <div className="aspect-square rounded-lg overflow-hidden bg-base-300 shrink-0 self-stretchrelative min-w-[100px]">
       {!loaded && !error && (
         <div className="absolute inset-0 flex items-center justify-center bg-base-200/50 backdrop-blur-[2px] z-10">
           <span className="loading loading-infinity w-8 text-primary/80"></span>
