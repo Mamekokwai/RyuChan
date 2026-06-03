@@ -522,7 +522,7 @@ export default function AlbumAdmin() {
                           {photos.map((photo, idx) => (
                             <div
                               key={`${photo.src}-${idx}`}
-                              className="flex items-center gap-3 bg-base-200/50 rounded-xl p-3 border border-base-200 hover:border-base-300 transition-colors group h-[130px]"
+                              className="flex items-center gap-3 bg-base-200/50 rounded-xl p-3 border border-base-200 hover:border-base-300 transition-colors group min-h-[130px]"
                             >
                               {/* Thumbnail */}
                               <AdminThumbnail
