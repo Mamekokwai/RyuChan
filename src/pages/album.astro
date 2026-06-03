@@ -6,18 +6,22 @@ import AlbumToolbar from "@components/admin/AlbumToolbar";
 import { Icon } from "astro-icon/components";
 ---
 
-<BaseLayout title="相册集" description="记录生活中的美好瞬间">
+<BaseLayout title="绘日记" description="用画笔记录每一年的故事">
   <div class="mb-8">
     <div class="flex items-center justify-between mb-4">
       <h1 class="text-3xl md:text-4xl font-bold flex items-center gap-3">
-        <Icon name="lucide:camera" class="text-primary" />
-        <span>相册集</span>
+        <Icon name="lucide:palette" class="text-primary" />
+        <span>绘日记</span>
       </h1>
       <AlbumToolbar client:only="react" />
     </div>
     <p class="text-muted-foreground text-lg">
-      记录生活中的美好瞬间，每一张照片都承载着珍贵的回忆。
+      每一笔都是时光的印记，每张画都是一个世界。
     </p>
+    <div class="alert alert-warning mt-4 text-sm">
+      <Icon name="lucide:alert-triangle" class="w-5 h-5" />
+      <span>本站所有插画均为原创作品，未经授权禁止转载、商用、AI 训练或以任何形式二次发布。</span>
+    </div>
   </div>
 
   <AlbumGrid client:only="react" />
