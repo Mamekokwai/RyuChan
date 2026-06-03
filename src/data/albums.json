@@ -5,7 +5,7 @@
     "event": "..静静幽香",
     "title": "意愿所及之处, 充满鲜花🌻",
     "description": "风见幽香专辑,全是幽香的世界!",
-    "icon": "🎨",
+    "icon": "🌻",
     "photos": [
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250220幽香.jpg",
@@ -53,7 +53,7 @@
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260225幽香稿件_曾广.jpg",
         "variant": "1x1",
         "title": "OSU!",
-        "description": "委托来自一个爱打游戏的朋友"
+        "description": "委托来自一个爱打游戏的[朋友](https://space.bilibili.com/510694894?spm_id_from=333.337.0.0)"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/251119社团新稿-4Q-3.jpg",
@@ -122,48 +122,43 @@
     "event": "2026",
     "title": "2026 绘日记",
     "description": "今年的画都在这里",
-    "icon": "📷",
+    "icon": "🎨",
     "photos": [
       {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260518情人节礼物uuz-2.jpg",
+        "variant": "4x3",
+        "title": "幽幽子",
+        "description": "送给曦曦的情人节礼物"
+      },
+      {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260107可爱华扇.jpg",
-        "variant": "1x1",
+        "variant": "9x16",
         "title": "华扇",
-        "description": "可爱即是正义"
+        "description": "可爱即是正义,华扇接力作品"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260224早苗.jpg",
-        "variant": "9x16",
+        "variant": "1x1",
         "title": "早苗",
-        "description": "奇迹的风祝"
+        "description": "奇迹的风祝,稿件@林柯"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260225幽香稿件_曾广.jpg",
         "variant": "1x1",
         "title": "OSU!幽香",
-        "description": "委托稿件"
+        "description": "委托稿件@曾广"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260415圣白莲＆村纱水蜜稿件.jpg",
-        "variant": "4x3",
+        "variant": "4x5",
         "title": "圣白莲&村纱水蜜",
-        "description": "命莲寺的日常"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260423广t宣传图.jpg",
-        "variant": "1x1",
-        "title": "广T宣传"
+        "description": "来\"江苏海洋大学\"上学了,委托稿件@谔谔"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260509小恶魔约稿.jpg",
-        "variant": "9x16",
+        "variant": "4x3",
         "title": "小恶魔",
-        "description": "委托稿件"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260518情人节礼物uuz.jpg",
-        "variant": "9x16",
-        "title": "幽幽子",
-        "description": "情人节礼物"
+        "description": "委托稿件@⁣  ⁢D杀何 "
       }
     ]
   },
@@ -176,16 +171,22 @@
     "icon": "🖌️",
     "photos": [
       {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250106秋姐妹.jpg",
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250301爱丽丝.jpg",
         "variant": "1x1",
-        "title": "秋姐妹",
-        "description": "丰收的宁静"
+        "title": "爱丽丝",
+        "description": "人形使的午后"
       },
       {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250109纯狐.jpg",
-        "variant": "9x16",
-        "title": "纯狐",
-        "description": "月之民的孤高"
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250717曦曦生日图.jpg",
+        "variant": "1x1",
+        "title": "曦曦生日贺图",
+        "description": "送给曦曦的礼物"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250106秋姐妹.jpg",
+        "variant": "4x5",
+        "title": "秋姐妹",
+        "description": "丰收的宁静,商业稿件@小博"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250120吃西瓜⑨.jpg",
@@ -195,13 +196,13 @@
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250124霍青娥.jpg",
-        "variant": "9x16",
+        "variant": "1x1",
         "title": "青娥",
         "description": "穿墙而过的仙人"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250128斯卡雷特姐妹.jpg",
-        "variant": "4x3",
+        "variant": "1x1",
         "title": "斯卡雷特姐妹",
         "description": "红魔馆的两位主人"
       },
@@ -219,13 +220,13 @@
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250212华扇姐姐.jpg",
-        "variant": "9x16",
+        "variant": "1x1",
         "title": "华扇",
         "description": "仙人的假日"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250217厚涂灵梦.jpg",
-        "variant": "9x16",
+        "variant": "4x3",
         "title": "灵梦(厚涂)",
         "description": "尝试了新画法"
       },
@@ -237,19 +238,21 @@
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250218岐奈纯狐.jpg",
-        "variant": "1x1",
-        "title": "岐奈&纯狐"
+        "variant": "4x3",
+        "title": "岐奈&纯狐",
+        "description": "磕磕磕"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250223纯摩小漫画.jpg",
-        "variant": "4x3",
-        "title": "纯摩小剧场"
+        "variant": "1x1",
+        "title": "纯摩小剧场",
+        "description": "合绘"
       },
       {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250301爱丽丝.jpg",
-        "variant": "9x16",
-        "title": "爱丽丝",
-        "description": "人形使的午后"
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250109纯狐.jpg",
+        "variant": "1x1",
+        "title": "纯狐",
+        "description": "月之民的孤高"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250303依神紫苑.jpg",
@@ -259,20 +262,21 @@
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250305纯摩合绘.jpg",
-        "variant": "4x3",
+        "variant": "1x1",
         "title": "纯摩合绘",
-        "description": "和小粨的合作"
+        "description": "合会"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250311恋立绘.jpg",
-        "variant": "9x16",
+        "variant": "4x5",
         "title": "古明地恋",
         "description": "无意识的人偶"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250318星落定海谣.jpg",
-        "variant": "4x3",
-        "title": "星落定海谣"
+        "variant": "4x5",
+        "title": "星落定海谣",
+        "description": "密封蜜蜂是好的,商业稿件@小博 的约稿"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250322傲娇幽香.jpg",
@@ -282,7 +286,7 @@
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250329伊吹翠香.jpg",
-        "variant": "1x1",
+        "variant": "9x16",
         "title": "翠香",
         "description": "酒葫芦不离手"
       },
@@ -294,12 +298,12 @@
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250415纯狐.jpg",
-        "variant": "9x16",
+        "variant": "1x1",
         "title": "纯狐(二)"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250504纯摩.jpg",
-        "variant": "1x1",
+        "variant": "4x3",
         "title": "纯摩"
       },
       {
@@ -310,44 +314,33 @@
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250514恋恋日.jpg",
-        "variant": "1x1",
-        "title": "恋恋日",
-        "description": "514"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250519永琳接力海报.jpg",
         "variant": "4x5",
-        "title": "永琳接力海报"
+        "title": "恋恋日",
+        "description": "514速写"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250604山东日照thp.jpg",
         "variant": "4x3",
-        "title": "山东日照THP"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250717曦曦生日图.jpg",
-        "variant": "9x16",
-        "title": "曦曦生日贺图"
+        "title": "山东日照THP",
+        "description": "猫和埃及美人,商业稿件@小博"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/251013华扇接力一宣图.jpg",
-        "variant": "4x5",
-        "title": "华扇接力一宣"
+        "variant": "9x16",
+        "title": "华扇接力一宣",
+        "description": "稿件@HaiSei "
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/251013揉脸爱丽丝.jpg",
         "variant": "1x1",
-        "title": "揉脸爱丽丝"
+        "title": "揉脸爱丽丝",
+        "description": "揉脸系列"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/251014揉脸幽幽子.jpg",
         "variant": "1x1",
-        "title": "揉脸幽幽子"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/251223夏玛&米璐库.jpg",
-        "variant": "4x3",
-        "title": "夏玛&米璐库"
+        "title": "揉脸幽幽子",
+        "description": "揉脸系列"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/251228学妹幽香.jpg",
@@ -366,64 +359,64 @@
     "icon": "✏️",
     "photos": [
       {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241030灵梦.jpg",
-        "variant": "9x16",
-        "title": "灵梦",
-        "description": "悠闲的巫女"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241104花海八云紫.jpg",
-        "variant": "4x3",
-        "title": "花海八云紫",
-        "description": "隙间外的风景"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241109太阳花田的魔理沙.jpg",
-        "variant": "4x3",
-        "title": "太阳花田的魔理沙",
-        "description": "借点蘑菇嘛~"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241114樱花茨华仙.jpg",
-        "variant": "9x16",
-        "title": "樱花华扇",
-        "description": "春日的仙人"
-      },
-      {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241124花海灵梦.jpg",
-        "variant": "4x3",
+        "variant": "9x16",
         "title": "花海灵梦",
         "description": "赛钱箱之外的世界"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241129蝴蝶帕秋莉.jpg",
-        "variant": "4x3",
-        "title": "蝴蝶帕秋莉",
-        "description": "图书馆的访客"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241201水墨华扇.jpg",
-        "variant": "9x16",
-        "title": "水墨华扇",
-        "description": "新画风尝试"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241206水墨铃仙.jpg",
-        "variant": "9x16",
-        "title": "水墨铃仙",
-        "description": "月兔的忧郁"
-      },
-      {
-        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241207水墨帝.jpg",
-        "variant": "9x16",
-        "title": "水墨帝",
-        "description": "天人五衰"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241212揉脸灵梦.jpg",
         "variant": "1x1",
         "title": "揉脸灵梦",
         "description": "赛钱箱又空了"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241104花海八云紫.jpg",
+        "variant": "1x1",
+        "title": "花海八云紫",
+        "description": "隙间外的风景"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241201水墨华扇.jpg",
+        "variant": "1x1",
+        "title": "水墨华扇",
+        "description": "新画风尝试"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241030灵梦.jpg",
+        "variant": "1x1",
+        "title": "灵梦",
+        "description": "悠闲的巫女"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241114樱花茨华仙.jpg",
+        "variant": "1x1",
+        "title": "樱花华扇",
+        "description": "春日的仙人"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241109太阳花田的魔理沙.jpg",
+        "variant": "1x1",
+        "title": "太阳花田的魔理沙",
+        "description": "借点蘑菇嘛~"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241129蝴蝶帕秋莉.jpg",
+        "variant": "9x16",
+        "title": "蝴蝶帕秋莉",
+        "description": "图书馆的访客"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241206水墨铃仙.jpg",
+        "variant": "9x16",
+        "title": "水墨铃仙",
+        "description": "帅"
+      },
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241207水墨帝.jpg",
+        "variant": "4x3",
+        "title": "水墨帝",
+        "description": "天人五衰"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241220秦恋组.jpg",
@@ -433,13 +426,13 @@
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241224平安夜早苗.jpg",
-        "variant": "9x16",
+        "variant": "1x1",
         "title": "平安夜早苗",
         "description": "圣诞奇迹"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/241231斜刘海小恶魔.jpg",
-        "variant": "9x16",
+        "variant": "1x1",
         "title": "斜刘海小恶魔",
         "description": "新发型如何?"
       }
