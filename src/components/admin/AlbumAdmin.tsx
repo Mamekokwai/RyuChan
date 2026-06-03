@@ -345,7 +345,7 @@ export default function AlbumAdmin() {
               </div>
 
               {/* Content */}
-              <div className="flex-1 overflow-y-auto px-6 py-4">
+              <div className="flex-1 overflow-y-auto overflow-x-hidden px-6 py-4 min-w-0">
                 {activeTab === 'info' ? (
                   /* Album Info Tab */
                   <div className="space-y-4">
@@ -538,7 +538,7 @@ export default function AlbumAdmin() {
                               />
 
                               {/* Edit fields */}
-                              <div className="flex-1 min-w-0 space-y-2">
+                              <div className="flex-1 min-w-0 space-y-2 overflow-hidden">
                                 <div className="flex items-center gap-2">
                                   <input
                                     type="text"
