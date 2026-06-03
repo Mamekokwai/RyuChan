@@ -1,12 +1,12 @@
 {
     "songs": [
         {
-            "artist": "周杰伦",
-            "cover": "https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_5.jpg?max_age=2592000",
-            "duration": "04:29",
-            "lrc": "https://imgbed.904002.xyz/file/music/歌词/周杰伦/晴天.lrc",
-            "title": "晴天",
-            "url": "https://music1.904002.xyz/%E5%91%A8%E6%9D%B0%E4%BC%A6/晴天.flac"
+            "title": "Ref:rain",
+            "artist": "Aimer",
+            "cover": "https://163.hyc.moe?server=netease&type=pic&id=109951166663296887",
+            "url": "https://163.hyc.moe?server=netease&type=url&id=536623501&br=320",
+            "lrc": "https://163.hyc.moe?server=netease&type=lrc&id=536623501&format=lrc&trans=true",
+            "duration": "04:50"
         },
         {
             "title": "ゆめみどり",
@@ -1433,6 +1433,22 @@
             "duration": "03:44"
         },
         {
+            "title": "Beautiful Dreams",
+            "artist": "Vivienne",
+            "cover": "https://163.hyc.moe?server=netease&type=pic&id=109951163516679812",
+            "url": "https://163.hyc.moe?server=netease&type=url&id=744728&br=320",
+            "lrc": "https://163.hyc.moe?server=netease&type=lrc&id=744728&format=lrc&trans=true",
+            "duration": "04:49"
+        },
+        {
+            "artist": "周杰伦",
+            "cover": "https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_5.jpg?max_age=2592000",
+            "duration": "04:29",
+            "lrc": "https://imgbed.904002.xyz/file/music/歌词/周杰伦/晴天.lrc",
+            "title": "晴天",
+            "url": "https://music1.904002.xyz/%E5%91%A8%E6%9D%B0%E4%BC%A6/晴天.flac"
+        },
+        {
             "title": "Dreamścape",
             "artist": "ミツキヨ",
             "cover": "https://163.hyc.moe?server=netease&type=pic&id=109951169158850128",
@@ -1578,7 +1594,8 @@
         }
     ],
     "playlistCounts": {
-        "746335449": 178,
+        "746335449": 179,
+        "18008527562": 3,
         "zhoujielun": 1,
         "18004279667": 6,
         "18003941232": 11,
@@ -1586,6 +1603,14 @@
     },
     "playlistSongs": {
         "746335449": [
+            {
+                "title": "Ref:rain",
+                "artist": "Aimer",
+                "cover": "https://163.hyc.moe?server=netease&type=pic&id=109951166663296887",
+                "url": "https://163.hyc.moe?server=netease&type=url&id=536623501&br=320",
+                "lrc": "https://163.hyc.moe?server=netease&type=lrc&id=536623501&format=lrc&trans=true",
+                "duration": "04:50"
+            },
             {
                 "title": "ゆめみどり",
                 "artist": "Qutabire",
@@ -3011,6 +3036,32 @@
                 "duration": "03:44"
             }
         ],
+        "18008527562": [
+            {
+                "title": "Beautiful Dreams",
+                "artist": "Vivienne",
+                "cover": "https://163.hyc.moe?server=netease&type=pic&id=109951163516679812",
+                "url": "https://163.hyc.moe?server=netease&type=url&id=744728&br=320",
+                "lrc": "https://163.hyc.moe?server=netease&type=lrc&id=744728&format=lrc&trans=true",
+                "duration": "04:49"
+            },
+            {
+                "title": "With Me　",
+                "artist": "Vivienne",
+                "cover": "https://163.hyc.moe?server=netease&type=pic&id=109951163516679812",
+                "url": "https://163.hyc.moe?server=netease&type=url&id=744780&br=320",
+                "lrc": "https://163.hyc.moe?server=netease&type=lrc&id=744780&format=lrc&trans=true",
+                "duration": "06:18"
+            },
+            {
+                "title": "Flower of Life",
+                "artist": "陽花",
+                "cover": "https://163.hyc.moe?server=netease&type=pic&id=109951163516679812",
+                "url": "https://163.hyc.moe?server=netease&type=url&id=744722&br=320",
+                "lrc": "https://163.hyc.moe?server=netease&type=lrc&id=744722&format=lrc&trans=true",
+                "duration": "05:41"
+            }
+        ],
         "zhoujielun": [
             {
                 "artist": "周杰伦",
@@ -3220,5 +3271,5 @@
             }
         ]
     },
-    "_fingerprint": "0e7b162a9e302a7bd503a40ce1314deb"
+    "_fingerprint": "798980bbda11925763fdebd5ed5f29a0"
 }
