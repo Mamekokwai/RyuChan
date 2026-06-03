@@ -189,7 +189,7 @@ export default function AlbumAdmin() {
         reader.readAsDataURL(file)
       })
       const variant = await detectVariantFromUrl(dataUrl)
-      
+
       const key = `${album.id}::${startIndex + i}`
       const previewUrl = URL.createObjectURL(file)
       addPendingPhoto(key, { file, previewUrl })
@@ -279,7 +279,7 @@ export default function AlbumAdmin() {
 
             {/* Slide-over panel */}
             <motion.div
-              className="fixed right-0 top-0 h-full w-full max-w-lg bg-base-100 shadow-2xl z-50 flex flex-col border-l border-base-300"
+              className="fixed right-0 top-0 h-full w-full max-w-2xl bg-base-100 shadow-2xl z-50 flex flex-col border-l border-base-300"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
