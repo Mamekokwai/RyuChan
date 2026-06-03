@@ -147,6 +147,10 @@ user:
   qr_alipay: /Alipay.jpg
   sidebar:
     social:
+      - href: mailto:nywerya@gmail.com
+        title: Email
+        ariaLabel: Email
+        svg: ri:mail-line
       - href: https://space.bilibili.com/491487822
         ariaLabel: Bilibili
         title: Bilibili
@@ -159,18 +163,6 @@ user:
         ariaLabel: Github
         title: Github
         svg: ri:github-line
-      - href: mailto:nywerya@gmail.com
-        title: Email
-        ariaLabel: Email
-        svg: ri:mail-line
-      - href: https://www.goofish.com/personal?spm=a21ybx.home.nav.1.4c053da6nbTQS7
-        title: Xianyu
-        ariaLabel: Xianyu
-        svg: ri:shopping-bag-line
-      - href: http://wpa.qq.com/msgrd?v=3&uin=2977877257&site=qq&menu=yes
-        title: QQ
-        ariaLabel: QQ
-        svg: ri:qq-line
   footer:
     social:
       - href: https://github.com/Mamekokwai
@@ -189,6 +181,10 @@ user:
         ariaLabel: QQ
         title: QQ
         svg: ri:qq-line
+      - href: https://www.goofish.com/personal?spm=a21ybx.home.nav.1.4c053da6nbTQS7
+        title: Xianyu
+        ariaLabel: Xianyu
+        svg: ri:shopping-bag-line
 comments:
   enable: true
   type: waline
