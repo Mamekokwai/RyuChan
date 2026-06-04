@@ -14,6 +14,8 @@
 [**🖥️ Ryuchan Demo**](https://demo.131714.xyz)  
 [**🖥️ Nywerya's blog**](https://blog.nywerya.xyz)
 
+> 📌 本仓库是 [RyuChan](https://github.com/kobaridev/RyuChan) 的个人定制 fork，由 [Nywerya](https://blog.nywerya.xyz) 维护。感谢原作者 [kobaridev](https://github.com/kobaridev) 的开源贡献。
+
 ## 📷 预览  
 
 ![preview](https://picbed.131714.xyz/blog/ryuchan_preview.png)  
