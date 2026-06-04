@@ -98,8 +98,8 @@ anime:
   bilibili:
     uid: '491487822'
   tmdb:
-    apiKey: 08a6bef260044f70c150251c79f2e476
-    listId: '8556173'
+    apiKey: ccb6e2ae2ae5f9247813a200ff26d8b3
+    listId: '8659504'
 music:
   playlists:
     - id: '746335449'
