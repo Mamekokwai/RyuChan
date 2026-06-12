@@ -10,7 +10,8 @@ tags:
   - gaming
   - self-host
   - tutorial
-categories: []
+categories:
+  - 教程
 badge: ''
 ---
 
