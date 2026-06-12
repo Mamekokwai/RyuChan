@@ -11,11 +11,7 @@ tags:
   - self-host
   - tutorial
 categories: []
-slug: n2n-virtual-lan-setup
-cover: 发布/注释/N2N-cover.png
-summary: N2N 自建虚拟局域网完整教程，含一键部署脚本、Supernode/Edge 配置、EasyN2N 客户端使用。
-type: tutorial
-original: "[[笔记/网络与服务器/虚拟局域网N2N|N2N 虚拟局域网]]"
+badge: ''
 ---
 
 ![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/N2N-cover.png)
