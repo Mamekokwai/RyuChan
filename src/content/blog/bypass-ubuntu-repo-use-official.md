@@ -12,7 +12,8 @@ tags:
   - apt
   - nginx
   - tutorial
-categories: []
+categories:
+  - 教程
 slug: bypass-ubuntu-repo-use-official
 summary: 绕开 Ubuntu 保守的软件仓库，从官方源直装最新版——以 Nginx 为例，附排雷指南。
 type: tutorial

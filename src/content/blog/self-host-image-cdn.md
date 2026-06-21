@@ -9,7 +9,8 @@ tags:
   - nginx
   - self-host
   - tutorial
-categories: []
+categories:
+  - 教程
 slug: self-host-image-cdn
 cover: 发布/注释/自建图床-cover.png
 summary: 利用 Syncthing 实时同步 + Nginx 静态服务搭建个人图床，写作流程零改变。

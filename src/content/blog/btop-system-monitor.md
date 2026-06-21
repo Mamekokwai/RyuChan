@@ -10,7 +10,8 @@ tags:
   - monitoring
   - tool
   - tutorial
-categories: []
+categories:
+  - 教程
 slug: btop-system-monitor
 cover: 发布/注释/btop-cover.png
 summary: btop 终端系统资源监视器的安装、配置与使用教程，替代 htop/iftop/iotop 三合一。

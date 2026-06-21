@@ -12,7 +12,8 @@ tags:
   - linux
   - self-host
   - tutorial
-categories: []
+categories:
+  - 教程
 slug: deploy-waline-self-host
 cover: 发布/注释/Waline-cover.png
 summary: 从零部署 Waline 评论系统到自有服务器，涵盖 Docker、SQLite、Nginx 反代、前端接入、管理后台全流程。

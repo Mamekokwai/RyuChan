@@ -9,7 +9,8 @@ tags:
   - nginx
   - self-host
   - tutorial
-categories: []
+categories:
+  - 教程
 slug: p2p-file-sync-setup
 cover: 发布/注释/Syncthing-cover.png
 summary: Syncthing 开源 P2P 文件同步工具的完整部署教程，含 Nginx 反代配置与踩坑实录。

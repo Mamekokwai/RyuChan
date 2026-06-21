@@ -12,7 +12,8 @@ tags:
   - utf-8
   - web
   - tutorial
-categories: []
+categories:
+  - 教程
 slug: url-encoding-chinese-links
 cover: 发布/注释/URL编码-中文链接变形记-cover.png
 summary: 从中文链接变 %XX 乱码说起，讲透 URL 编码原理：UTF-8 字节转换、浏览器兜底、curl 踩坑、1994 年的设计债。

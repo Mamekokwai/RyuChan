@@ -10,7 +10,8 @@ tags:
   - 指令
   - linux
   - package-management
-categories: []
+categories:
+  - 教程
 ---
 
 # Linux 包管理升级

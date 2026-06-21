@@ -11,7 +11,8 @@ tags:
   - extension
   - clipboard
   - linux
-categories: []
+categories:
+  - 教程
 slug: gnome-clipboard-indicator
 cover: 发布/注释/GNOME剪贴板管理器-ClipboardIndicator - cover.png
 summary: 原生 GNOME Shell 剪贴板扩展，即时响应，数据完全本地，隐私模式一键暂停记录。

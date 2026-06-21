@@ -10,7 +10,8 @@ tags:
   - ai
   - self-host
   - tutorial
-categories: []
+categories:
+  - 教程
 slug: one-api-proxy-setup
 cover: 发布/注释/OneAPI-cover.png
 summary: Docker 部署 one-api 聚合多平台 AI API，统一管理 Key 并按量计费，附 Cloudflare Workers 零成本方案。
