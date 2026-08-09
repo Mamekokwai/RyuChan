@@ -126,11 +126,18 @@
     "icon": "🎨",
     "photos": [
       {
+        "src": "https://photo.nywerya.xyz/Obsidian/%E7%A7%81%E4%BA%BA/%E7%BB%98%E7%94%BB/%E6%B3%A8%E9%87%8A/%E7%A7%A6%E5%BF%83%E9%9B%A8.jpg",
+        "variant": "9x16",
+        "title": "秦心雨",
+        "description": "雨天秦心,美美美",
+        "restriction": "委托稿件，禁止使用"
+      },
+      {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260518情人节礼物uuz-2.jpg",
         "variant": "4x3",
         "title": "幽幽子",
         "description": "送给曦曦的情人节礼物",
-        "restriction": "赠予曦曦,禁止使用"
+        "restriction": "赠予曦曦的礼物,禁止使用"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/260107可爱华扇.jpg",
@@ -187,7 +194,7 @@
         "variant": "1x1",
         "title": "曦曦生日贺图",
         "description": "送给曦曦的礼物",
-        "restriction": "赠予曦曦,禁止使用"
+        "restriction": "赠予曦曦的礼物,禁止使用"
       },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250106秋姐妹.jpg",
