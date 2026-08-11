@@ -8,6 +8,13 @@
     "icon": "🌻",
     "photos": [
       {
+        "src": "https://photo.nywerya.xyz/Obsidian/%E7%A7%81%E4%BA%BA/%E7%BB%98%E7%94%BB/%E6%B3%A8%E9%87%8A/%E5%A5%B6%E8%8C%B6.jpg",
+        "variant": "9x16",
+        "title": "奶茶",
+        "description": "为补偿今年七月份幽香接力没有新作",
+        "restriction": ""
+      },
+      {
         "src": "https://photo.nywerya.xyz/Obsidian/私人/绘画/注释/250220幽香.jpg",
         "variant": "1x1",
         "title": "华丽",
@@ -125,6 +132,12 @@
     "description": "今年的画都在这里",
     "icon": "🎨",
     "photos": [
+      {
+        "src": "https://photo.nywerya.xyz/Obsidian/%E7%A7%81%E4%BA%BA/%E7%BB%98%E7%94%BB/%E6%B3%A8%E9%87%8A/%E5%A5%B6%E8%8C%B6.jpg",
+        "variant": "9x16",
+        "title": "奶茶",
+        "description": "夏日奶茶,为补偿今年七月份幽香接力没有新作"
+      },
       {
         "src": "https://photo.nywerya.xyz/Obsidian/%E7%A7%81%E4%BA%BA/%E7%BB%98%E7%94%BB/%E6%B3%A8%E9%87%8A/%E7%A7%A6%E5%BF%83%E9%9B%A8.jpg",
         "variant": "9x16",
