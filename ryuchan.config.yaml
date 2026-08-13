@@ -193,7 +193,7 @@ user:
         svg: ri:shopping-bag-line
 comments:
   enable: true
-  type: twikoo
+  type: waline
   giscus:
     repo: kobaridev/gsc
     repoId: R_kgDOPTM-mA
@@ -204,9 +204,9 @@ comments:
     inputPosition: top
     reactionsEnabled: '1'
     emitMetadata: '0'
-    loading: lazy
+    loading: eagle
   waline:
     serverURL: https://comment.nywerya.xyz
     lang: zh
   twikoo:
-    envId: https://twikoo.131714.xyz/
+    envId: 
