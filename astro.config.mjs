@@ -14,6 +14,7 @@ import { CODE_THEME, USER_SITE, GITHUB_CONFIG } from "./src/config.ts";
 import updateConfig from "./src/integration/updateConfig.ts";
 
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
+import rehypeDemoteHeadings from "./src/plugins/rehype-demote-headings.mjs";
 
 import cloudflare from "@astrojs/cloudflare";
 
@@ -219,7 +220,7 @@ export default defineConfig({
       ],
     },
     remarkPlugins: [remarkMath, remarkReadingTime],
-    rehypePlugins: [rehypeKatex, [
+    rehypePlugins: [rehypeDemoteHeadings, rehypeKatex, [
       rehypeExternalLinks,
       {
         content: { type: "text", value: "↗" },
