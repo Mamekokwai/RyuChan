@@ -12,6 +12,13 @@ tags:
   - package-management
 categories:
   - 教程
+slug: linux-package-upgrade
+cover: /images/linux-package-upgrade/0ddfa5cc6ec8146d.png
+summary: Linux 各发行版全量升级已安装软件包的命令速查，覆盖 apt/dnf/pacman/zypper/emerge/apk/snap/flatpak/xbps/nix 共 10 种包管理器。
+type: cheatsheet
+original: "[[速查/指令/Linux包管理升级-指令|Linux包管理升级-指令]]"
+Release Platform:
+  - blog.nywerya.xyz
 ---
 
 # Linux 包管理升级

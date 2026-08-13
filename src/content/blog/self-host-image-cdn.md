@@ -16,6 +16,8 @@ cover: 发布/注释/自建图床-cover.png
 summary: 利用 Syncthing 实时同步 + Nginx 静态服务搭建个人图床，写作流程零改变。
 type: tutorial
 original: "[[笔记/网络与服务器/自建图床-Syncthing+Nginx|自建图床-Syncthing+Nginx]]"
+Release Platform:
+  - blog.nywerya.xyz
 ---
 
 ![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/自建图床-cover.png)
@@ -91,6 +93,7 @@ sudo certbot --nginx -d photo.example.com
 ```
 
 Certbot 会自动：
+
 - 申请证书
 - 把 `listen 80` 改为 `listen 443 ssl`
 - 补上 `ssl_certificate` / `ssl_certificate_key` 路径
@@ -181,7 +184,7 @@ curl -I https://photo.example.com/test.png 2>/dev/null | grep -i cache
 ## 优缺点
 
 | 维度 | 评价 |
-|-|-|
+| - | - |
 | 成本 | ✅ 用已有服务器，零额外支出 |
 | 速度 | ⚠️ 家用服务器上行带宽有限（10-30Mbps），大图加载慢 |
 | 维护 | ⚠️ 需要维护 Nginx + Syncthing + SSL 证书 |

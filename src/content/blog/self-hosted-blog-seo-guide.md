@@ -16,9 +16,9 @@ slug: self-hosted-blog-seo-guide
 cover: 发布/注释/SEO-自建博客搜索优化实战-cover.png
 summary: 自建博客搜索优化的手把手教程，不提废话，做完就有效。Astro / Hexo / Hugo 通用。
 type: tutorial
+original: "[[笔记/网络与服务器/SEO-自建博客搜索优化实战|SEO-自建博客搜索优化实战]]"
 Release Platform:
   - blog.nywerya.xyz
-original: "[[笔记/网络与服务器/SEO-自建博客搜索优化实战|SEO-自建博客搜索优化实战]]"
 ---
 
 # 自建博客 SEO 实战：不提废话，做完就有效
@@ -90,7 +90,7 @@ tags:
 ## 3. 内容 Checklist（每篇对照）
 
 | 项 | 说明 |
-|----|------|
+| ---- | ------ |
 | 标题含关键词 | 搜的人打什么，标题就含什么 |
 | URL 语义化 | `/blog/deploy-waline` 不是 `/blog/post-3` |
 | 内链 2+ | 每篇链到两篇旧文 |

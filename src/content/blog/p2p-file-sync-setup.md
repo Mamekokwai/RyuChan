@@ -16,6 +16,8 @@ cover: 发布/注释/Syncthing-cover.png
 summary: Syncthing 开源 P2P 文件同步工具的完整部署教程，含 Nginx 反代配置与踩坑实录。
 type: tutorial
 original: "[[笔记/网络与服务器/Syncthing|Syncthing]]"
+Release Platform:
+  - blog.nywerya.xyz
 ---
 
 ![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/Syncthing-cover.png)
@@ -79,7 +81,7 @@ sudo certbot --nginx -d sync.example.com
 直接访问 `127.0.0.1:8384` 返回 200，但通过域名返回 403。两个原因叠加：
 
 | 序号 | 原因 | 现象 | 修复 |
-|-|-|-|-|
+| - | - | - | - |
 | 1 | Certbot 生成的 server block 是**静态文件服务器**（`root` + `try_files`），不是反代 | nginx 尝试从 `/var/www/html` 找文件，找不到返回 403 | 改为 `proxy_pass http://127.0.0.1:8384` |
 | 2 | Syncthing 的 **CSRF Host 校验**拒绝域名头 | 改了反代后依然 403 | `proxy_set_header Host 127.0.0.1:8384`（传 Syncthing 自己监听的地址） |
 
@@ -97,7 +99,7 @@ sudo ufw allow 21027/udp
 ### 阿里云安全组
 
 | 端口 | 协议 | 授权 |
-|-|-|-|
+| - | - | - |
 | 22000 | TCP | 0.0.0.0/0 |
 | 21027 | UDP | 0.0.0.0/0 |
 

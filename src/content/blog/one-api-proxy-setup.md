@@ -17,6 +17,8 @@ cover: 发布/注释/OneAPI-cover.png
 summary: Docker 部署 one-api 聚合多平台 AI API，统一管理 Key 并按量计费，附 Cloudflare Workers 零成本方案。
 type: tutorial
 original: "[[笔记/AI/one-api搭建_中转站部署教程|one-api 中转站搭建教程]]"
+Release Platform:
+  - blog.nywerya.xyz
 ---
 
 ![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/OneAPI-cover.png)
@@ -30,7 +32,7 @@ API 中转站的核心思路：**你有上游 API Key（DeepSeek/OpenAI/Claude�
 ## 一、你需要什么
 
 | 资源 | 说明 |
-|------|------|
+| ------ | ------ |
 | 一台服务器 | 轻量云 ¥50-100/月（阿里云/腾讯云），1核2G 够用 |
 | 一个域名 | 用于中转站访问（api.你的域名.com），可选 |
 | 上游 API Key | DeepSeek 官网注册送额度，或找上游渠道 |
@@ -125,7 +127,7 @@ sudo certbot --nginx -d api.example.com
 渠道 → 添加渠道：
 
 | 字段 | 值 |
-|------|-----|
+| ------ | ----- |
 | 类型 | DeepSeek |
 | 名称 | DeepSeek |
 | 分组 | default |
@@ -136,7 +138,7 @@ sudo certbot --nginx -d api.example.com
 ### 4.2 添加 OpenAI 渠道（可选）
 
 | 字段 | 值 |
-|------|-----|
+| ------ | ----- |
 | 类型 | OpenAI |
 | 名称 | OpenAI |
 | 分组 | default |
@@ -152,7 +154,7 @@ Claude API 对国内 IP 不友好，需要反代。在代理栏填反代地址�
 如果你的上游也是中转站（兼容 OpenAI 格式）：
 
 | 字段 | 值 |
-|------|-----|
+| ------ | ----- |
 | 类型 | 自定义渠道 |
 | 名称 | 上游中转 |
 | 分组 | default |
@@ -172,8 +174,8 @@ Claude API 对国内 IP 不友好，需要反代。在代理栏填反代地址�
 
 建议倍率：
 
-| 模型 | 官方价（约）| 建议倍率 | 用户价（约）|
-|------|-----------|---------|-----------|
+| 模型 | 官方价（约） | 建议倍率 | 用户价（约） |
+| ------ | ----------- | --------- | ----------- |
 | DeepSeek Chat | ¥1/M | 1.5-2.0 | ¥1.5-2/M |
 | DeepSeek Reasoner | ¥4/M | 1.5-2.0 | ¥6-8/M |
 | GPT-4o | ¥35/M | 1.3-1.5 | ¥45-52/M |
@@ -277,7 +279,7 @@ DeepSeek 一个账号免费额度有限。如果客户量大：多注册几个 D
 ## 九、成本收益估算
 
 | 项目 | 月成本 |
-|------|--------|
+| ------ | -------- |
 | 轻量云服务器 | ¥50-100 |
 | 域名（年付） | ¥20-50/年 ≈ ¥2-4/月 |
 | 上游 API 成本 | 看客户用量 |

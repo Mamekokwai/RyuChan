@@ -12,7 +12,13 @@ tags:
   - tutorial
 categories:
   - 教程
-badge: ''
+slug: n2n-virtual-lan-setup
+cover: 发布/注释/N2N-cover.png
+summary: 用 N2N 自建虚拟局域网，解决无法 IP 直连游戏的联机问题，含一键部署脚本和服务端/客户端完整配置。
+type: tutorial
+original: "[[笔记/网络与服务器/虚拟局域网N2N|虚拟局域网N2N]]"
+Release Platform:
+  - blog.nywerya.xyz
 ---
 
 ![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/N2N-cover.png)
@@ -161,7 +167,7 @@ sudo journalctl -u n2n-supernode -n 50
 -k mysecretkey
 ```
 
-4. 连接即可
+1. 连接即可
 
 ## 直连命令（不用 EasyN2N）
 

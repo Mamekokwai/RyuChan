@@ -15,11 +15,12 @@ tags:
 categories:
   - 教程
 slug: bypass-ubuntu-repo-use-official
+cover: 发布/注释/添加官方仓库并跳过Ubuntu维护版本-cover.png
 summary: 绕开 Ubuntu 保守的软件仓库，从官方源直装最新版——以 Nginx 为例，附排雷指南。
 type: tutorial
+original: "[[笔记/操作系统/Linux/Ubuntu/添加官方仓库并跳过Ubuntu维护版本|添加官方仓库并跳过Ubuntu维护版本]]"
 Release Platform:
   - blog.nywerya.xyz
-cover: 发布/注释/添加官方仓库并跳过Ubuntu维护版本-cover.png
 ---
 
 
@@ -62,6 +63,7 @@ printf 'Package: *\nPin: origin <域名>\nPin-Priority: 900\n' | sudo tee /etc/a
 ```
 
 这就是 `apt pinning`。通俗解释就是给 apt 排座次：
+
 - 900 分：apt 会优先选这个源的版本，即使 Ubuntu 官方源有同名包
 - 默认 500 分：两个源都有的话，版本号高的赢
 - -1 分：死也不装
@@ -105,7 +107,7 @@ nginx -v
 绕开 Ubuntu 维护的包不是没代价的：
 
 | 风险 | 说明 |
-|-|-|
+| - | - |
 | **无人兜底** | 不再享受 Ubuntu 安全团队的补丁支持——上游修了你知道，上游没修你只能盯着 |
 | **依赖地狱** | 新版本可能依赖更高版本的库，而这些库 Ubuntu 仓库可能没有。装不上就挠头 |
 | **升级猝死** | 官方源推一个大版本号更新的时候，配置文件可能不兼容（尤其是 nginx 这种） |
@@ -125,7 +127,7 @@ nginx -v
 ## Pin-Priority 速查
 
 | 值 | 效果 |
-|-|-|
+| - | - |
 | 1000+ | 命令降级——「我要这个版本，管你是升是降」 |
 | 990 | 允许降级——「可以往回走」 |
 | 500-900 | 优先于同版本号的 Ubuntu 源——「大家都是 1.24，但我选你」 |

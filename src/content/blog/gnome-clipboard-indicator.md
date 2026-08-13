@@ -17,9 +17,9 @@ slug: gnome-clipboard-indicator
 cover: 发布/注释/GNOME剪贴板管理器-ClipboardIndicator - cover.png
 summary: 原生 GNOME Shell 剪贴板扩展，即时响应，数据完全本地，隐私模式一键暂停记录。
 type: tutorial
+original: "[[笔记/操作系统/Linux/GNOME剪贴板管理器-ClipboardIndicator-插件推荐|GNOME剪贴板管理器-ClipboardIndicator-插件推荐]]"
 Release Platform:
   - blog.nywerya.xyz
-original: "[[笔记/操作系统/Linux/GNOME剪贴板管理器-ClipboardIndicator-插件推荐|GNOME剪贴板管理器-ClipboardIndicator-插件推荐]]"
 ---
 
 
@@ -100,7 +100,7 @@ Clipboard Indicator 在安全上做对了三件事：
 ### 全键盘操作
 
 | 按键 | 功能 |
-|------|------|
+| ------ | ------ |
 | `↑` `↓` | 浏览 |
 | `Enter` | 粘贴 |
 | `Delete` | 删除 |
@@ -162,7 +162,7 @@ gnome-extensions enable clipboard-indicator@tudmotu.com
 ## 同类对比
 
 | | Clipboard Indicator | GPaste | CopyQ |
-|--|:--:|:--:|:--:|
+| -- | :--: | :--: | :--: |
 | 原生 GNOME 集成 | ✅ | ❌ | ❌ |
 | 响应速度 | 即时 | 有延迟 | 有延迟 |
 | 数据不出机器 | ✅ | ✅ | ❌（可能写磁盘） |

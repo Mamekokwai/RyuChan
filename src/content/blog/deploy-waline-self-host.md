@@ -19,9 +19,12 @@ cover: 发布/注释/Waline-cover.png
 summary: 从零部署 Waline 评论系统到自有服务器，涵盖 Docker、SQLite、Nginx 反代、前端接入、管理后台全流程。
 type: tutorial
 original: "[[笔记/网络与服务器/Waline|Waline]]"
+Release Platform:
+  - blog.nywerya.xyz
 ---
 
 # 部署 Waline 评论系统到自己的服务器完全指南 (保姆级教程 2026)
+
 ## 简介
 
 [Waline](https://waline.js.org) 是一个自托管的静态博客评论系统。基于 Node.js，**内置管理后台**，数据存 SQLite —— 意味着**不需要单独装数据库**，一个 Docker 容器就跑了。前端是 Web Component（Vue），原生支持暗黑模式、浏览量统计、表情包、Markdown 渲染、数学公式。
@@ -31,7 +34,7 @@ original: "[[笔记/网络与服务器/Waline|Waline]]"
 ### 为什么选 Waline 而不是 Twikoo
 
 | 对比 | Waline | Twikoo |
-|-|--|--|
+| - | -- | -- |
 | 数据库 | SQLite（无需额外容器） | MongoDB（必须） |
 | 管理后台 | 内置 `/ui`，注册即用 | 访问 `/#/login` 设置密码 |
 | 垃圾过滤 | Akismet + IP 频率 + 关键词 + 相似度检测 | 仅 IP 频率限制 |
@@ -50,7 +53,7 @@ original: "[[笔记/网络与服务器/Waline|Waline]]"
 ### 你需要这些
 
 | 东西 | 说明 |
-|-|-|
+| - | - |
 | 一台服务器 | 1c1g 足够。能 SSH 上去、能装 Docker |
 | 一个域名 | 前端 HTTPS 页面无法请求 HTTP 后端，所以必须有域名配 SSL |
 | 一个子域名 | 给 Waline 专用，比如 `comment.你的域名.com` |
@@ -149,7 +152,7 @@ Waline 用这个来判断哪些请求是合法的（CORS 白名单）。
 假设你的域名是 `blog.example.com`，子域名打算用 `comment.example.com`：
 
 | 变量 | 值 |
-|-|--|
+| - | -- |
 | `JWT_TOKEN` | `a1b2c3d4...`（openssl rand 那串） |
 | `SITE_NAME` | `我的博客` |
 | `SITE_URL` | `https://blog.example.com` |
@@ -220,7 +223,7 @@ docker run -d \
 每个参数的含义：
 
 | 参数 | 作用 |
-|-|-|
+| - | - |
 | `-d` | 后台运行 |
 | `-name waline` | 给容器取名，方便后续操作 |
 | `-restart=unless-stopped` | 服务器重启后自动启动容器 |
@@ -232,6 +235,7 @@ docker run -d \
 | `-e AUTHOR_EMAIL` | 博主邮箱 |
 
 > **关键提示**：
+>
 > 1. bash 续行符 `\` 必须是该行最后一个字符，**后面不能跟任何东西（包括空格和 `# 注释`）**，否则续行会断裂。
 > 2. 如果 `SITE_NAME` 含 `&` 等特殊字符，要用双引号包住整个 `-e "SITE_NAME=xxx"`，否则 bash 会把 `&` 解释为后台运行符。
 
@@ -360,6 +364,7 @@ Certbot 交互流程：
 4. **HTTP 是否自动跳转 HTTPS** — 选 **2 (Redirect)**
 
 执行完后 certbot 自动做了三件事：
+
 - 申请 Let's Encrypt SSL 证书
 - 把 Nginx 配置改成 HTTPS + 证书路径
 - 加了 HTTP→HTTPS 自动跳转
@@ -472,7 +477,7 @@ Waline 会自动查找页面上所有 `.waline-pageview-count` 元素并填入�
 不同框架的接入位置略有不同：
 
 | 框架 | 在哪加代码 |
-|-|---|
+| - | --- |
 | Hugo | `layouts/_default/single.html` 或主题的评论区 partial |
 | Hexo | 主题的 `layout/_partial/comments.ejs` 或文章模板 |
 | Jekyll | `_layouts/post.html` |
@@ -589,6 +594,7 @@ docker logs waline | grep -i smtp
 ```
 
 常见原因：
+
 - `SMTP_PASS` 填了邮箱密码而不是授权码（QQ/163 必须用授权码）
 - SMTP 端口不对（QQ 是 465，163 也是 465，Gmail 是 587）
 - 服务器防火墙屏蔽了 SMTP 端口（出站一般不拦，但如果拦了加白名单）

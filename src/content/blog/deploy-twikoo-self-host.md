@@ -17,6 +17,8 @@ cover: 发布/注释/Twikoo-cover.png
 summary: 从零部署 Twikoo 评论系统到自有服务器，涵盖 MongoDB、Docker、Nginx 反代、前端接入全流程。
 type: tutorial
 original: "[[笔记/网络与服务器/Twikoo|Twikoo]]"
+Release Platform:
+  - blog.nywerya.xyz
 ---
 # 如何部署 Twikoo 评论到自己的服务器 (保姆级教程 2026)
 
@@ -134,7 +136,7 @@ twikoo.init({
 ## 常用环境变量
 
 | 变量 | 说明 | 默认值 |
-|-|-|--|
+| - | - | -- |
 | `TWIKOO_THROTTLE` | 同一 IP 评论间隔（毫秒） | 60000 |
 | `TWIKOO_IP_HEADERS` | 获取真实 IP 的请求头，逗号分隔 | `x-forwarded-for` |
 | `MONGODB_URI` | MongoDB 连接字符串 | — |

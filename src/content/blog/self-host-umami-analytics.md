@@ -18,6 +18,8 @@ cover: 发布/注释/Umami-cover.png
 summary: Docker Compose 部署 Umami 网站统计，Nginx 反代 + SSL，集成博客展示全站 PV/UV 和单篇阅读量。
 type: tutorial
 original: "[[笔记/网络与服务器/Umami-自建网站统计|Umami 自建网站统计]]"
+Release Platform:
+  - blog.nywerya.xyz
 ---
 
 ![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/Umami-cover.png)
