@@ -10,7 +10,7 @@
     "prebuild": "node scripts/fetch-music-duration.mjs --progress",
     "build": "astro build && npx pagefind --site ./dist",
     "build:worker": "astro build",
-    "search:clean": "rimraf public/pagefind",
+    "search:clean": "node -e \"import('node:fs').then(fs => fs.rmSync('public/pagefind', { recursive: true, force: true }))\"",
     "search:index": "pnpm build && node scripts/copy-pagefind.mjs",
     "preview": "pnpm build && wrangler pages dev dist",
     "astro": "astro",

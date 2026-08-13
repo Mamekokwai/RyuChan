@@ -119,7 +119,7 @@ const needsKatex = blog.body?.includes("$$") ?? false;
       commentsConfig.type === "giscus" &&
       commentsConfig.giscus && (
         <>
-          <h1 class="text-2xl font-bold">Comments</h1>
+          <h2 class="text-2xl font-bold">Comments</h2>
           <MainCard>
             <section class="comments">
               <Giscus {...commentsConfig.giscus} />
@@ -134,7 +134,7 @@ const needsKatex = blog.body?.includes("$$") ?? false;
       commentsConfig.type === "waline" &&
       commentsConfig.waline && (
         <>
-          <h1 class="text-2xl font-bold">Comments</h1>
+          <h2 class="text-2xl font-bold">Comments</h2>
           <MainCard>
             <section class="comments">
               <Waline {...commentsConfig.waline} />
@@ -148,7 +148,7 @@ const needsKatex = blog.body?.includes("$$") ?? false;
       commentsConfig.type === "twikoo" &&
       commentsConfig.twikoo && (
         <>
-          <h1 class="text-2xl font-bold">Comments</h1>
+          <h2 class="text-2xl font-bold">Comments</h2>
           <MainCard>
             <section class="comments">
               <Twikoo {...commentsConfig.twikoo} />
