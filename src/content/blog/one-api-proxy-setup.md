@@ -21,8 +21,6 @@ Release Platform:
   - blog.nywerya.xyz
 ---
 
-![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/OneAPI-cover.png)
-
 # one-api 中转站搭建教程
 
 API 中转站的核心思路：**你有上游 API Key（DeepSeek/OpenAI/Claude），下游用户通过你中转调用，你赚差价**。

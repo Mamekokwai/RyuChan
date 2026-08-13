@@ -22,8 +22,6 @@ Release Platform:
   - blog.nywerya.xyz
 ---
 
-![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/Umami-cover.png)
-
 # Umami 自建网站统计
 
 ## 这是什么

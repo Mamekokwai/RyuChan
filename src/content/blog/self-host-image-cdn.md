@@ -20,8 +20,6 @@ Release Platform:
   - blog.nywerya.xyz
 ---
 
-![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/自建图床-cover.png)
-
 # 自建图床：Syncthing + Nginx
 
 ## 思路

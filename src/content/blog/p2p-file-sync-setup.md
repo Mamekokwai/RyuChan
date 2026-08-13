@@ -20,8 +20,6 @@ Release Platform:
   - blog.nywerya.xyz
 ---
 
-![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/Syncthing-cover.png)
-
 # Syncthing 部署与配置指南
 
 Syncthing 是一款开源的连续文件同步工具，P2P 架构，无需中心服务器。本文记录在云服务器上部署 Syncthing 并配置 Nginx 反代的全过程。

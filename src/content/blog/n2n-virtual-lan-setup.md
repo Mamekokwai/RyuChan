@@ -21,8 +21,6 @@ Release Platform:
   - blog.nywerya.xyz
 ---
 
-![封面](https://photo.nywerya.xyz/Obsidian/发布/注释/N2N-cover.png)
-
 # N2N 虚拟局域网搭建
 
 ## 为什么搭虚拟局域网
