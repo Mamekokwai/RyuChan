@@ -1,16 +1,34 @@
-// 把 pagefind 生成的索引从 dist 复制到 public，供 dev 服务器与提交使用。
-// 用 Node 内置 fs 而非 shell glob，避免 Windows cmd 下单引号 glob 静默失败。
-import { cpSync, existsSync, rmSync } from "node:fs";
+import fs from 'node:fs/promises';
+import path from 'path';
+import { existsSync } from 'node:fs';
 
-const src = "dist/pagefind";
-const dest = "public/pagefind";
+const src = path.resolve('dist/pagefind');
+const dst = path.resolve('public/pagefind');
 
-if (!existsSync(src)) {
-    console.error(`[copy-pagefind] 未找到 ${src}，请先运行 pagefind --site dist`);
-    process.exit(1);
+async function copyDir(srcDir, dstDir) {
+  const entries = await fs.readdir(srcDir, { withFileTypes: true });
+  if (!existsSync(dstDir)) {
+    await fs.mkdir(dstDir, { recursive: true });
+  }
+  for (const entry of entries) {
+    const srcPath = path.join(srcDir, entry.name);
+    const dstPath = path.join(dstDir, entry.name);
+    if (entry.isDirectory()) {
+      await copyDir(srcPath, dstPath);
+    } else {
+      await fs.copyFile(srcPath, dstPath);
+    }
+  }
 }
 
-rmSync(dest, { recursive: true, force: true });
-cpSync(src, dest, { recursive: true });
+if (!existsSync(src)) {
+  console.error('Error: dist/pagefind not found');
+  process.exit(1);
+}
 
-console.log(`[copy-pagefind] 已复制 ${src} → ${dest}`);
+console.log('Copying dist/pagefind → public/pagefind...');
+if (existsSync(dst)) {
+  await fs.rm(dst, { recursive: true, force: true });
+}
+await copyDir(src, dst);
+console.log('✅ Done');

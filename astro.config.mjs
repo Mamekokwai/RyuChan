@@ -3,7 +3,6 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
 import playformCompress from "@playform/compress";
-import terser from "@rollup/plugin-terser";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
 import rehypeExternalLinks from "rehype-external-links";
@@ -16,19 +15,24 @@ import updateConfig from "./src/integration/updateConfig.ts";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import rehypeDemoteHeadings from "./src/plugins/rehype-demote-headings.mjs";
 
-import cloudflare from "@astrojs/cloudflare";
-
 // https://astro.build/config
 export default defineConfig({
+  site: USER_SITE,
+  output: "static",
+
   vite: {
     envPrefix: ['PUBLIC_', 'NEXT_PUBLIC_'],
     define: {
       'import.meta.env.YAML_GITHUB_CONFIG': JSON.stringify(GITHUB_CONFIG || null)
-    }
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
+      },
+    },
   },
-
-  site: USER_SITE,
-  output: "static",
 
   style: {
     scss: {
@@ -41,10 +45,6 @@ export default defineConfig({
     react(),
     mdx(),
     icon(),
-    terser({
-      compress: true,
-      mangle: true,
-    }),
     sitemap(),
     tailwind({
       configFile: "./tailwind.config.mjs",
@@ -227,16 +227,4 @@ export default defineConfig({
       },
     ]],
   },
-
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: "modern-compiler",
-        },
-      },
-    },
-  },
-
-  adapter: cloudflare()
 });

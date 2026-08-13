@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { Fancybox } from '@fancyapps/ui'
+import '@fancyapps/ui/dist/fancybox/fancybox.css'
 import { Camera, ImageOff, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useAlbumStore } from '@/stores/album-store'
 import type { AlbumItem, Photo } from '@/data/albums'
@@ -17,9 +19,18 @@ const VARIANT_RATIO: Record<string, string> = {
   '9x16': '9 / 16',
 }
 
+// 为 <img> 提供 width/height 属性，确保浏览器在懒加载前就能预留正确的盒子空间
+const VARIANT_DIMENSIONS: Record<string, { w: number; h: number }> = {
+  '1x1': { w: 400, h: 400 },
+  '4x3': { w: 400, h: 300 },
+  '4x5': { w: 400, h: 500 },
+  '9x16': { w: 360, h: 640 },
+}
+
 function PhotoImage({ photo }: { photo: Photo }) {
   const [error, setError] = useState(false)
   const [loaded, setLoaded] = useState(false)
+  const dims = VARIANT_DIMENSIONS[photo.variant] || VARIANT_DIMENSIONS['1x1']
 
   if (error) {
     return (
@@ -40,14 +51,23 @@ function PhotoImage({ photo }: { photo: Photo }) {
           <span className="loading loading-infinity w-10 text-primary/80"></span>
         </div>
       )}
-      <img
-        src={photo.src}
-        alt={photo.title || ''}
-        className={`absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all duration-500 ease-out ${loaded ? 'opacity-100' : 'opacity-0'}`}
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        onError={() => { setLoaded(true); setError(true) }}
-      />
+      <a
+        href={photo.src}
+        data-fancybox="gallery"
+        data-caption={photo.title || ''}
+        className="block w-full h-full"
+      >
+        <img
+          src={photo.src}
+          alt={photo.title || ''}
+          width={dims.w}
+          height={dims.h}
+          className={`w-full h-full object-cover transform group-hover:scale-105 transition-all duration-500 ease-out ${loaded ? 'opacity-100' : 'opacity-0'}`}
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+          onError={() => { setLoaded(true); setError(true) }}
+        />
+      </a>
     </>
   )
 }
@@ -130,6 +150,43 @@ export default function PhotoWallGrid({ initialAlbum, event }: Props) {
     return () => window.removeEventListener('resize', update)
   }, [])
 
+  // Fancybox lifecycle: bind after render, cleanup on unmount
+  const gridRef = useRef<HTMLDivElement>(null)
+
+  // Destroy only on component unmount, never during photos re-renders
+  useEffect(() => {
+    return () => { Fancybox.destroy() }
+  }, [])
+
+  useEffect(() => {
+    if (!gridRef.current || photos.length === 0) return
+
+    Fancybox.bind(gridRef.current, '[data-fancybox]', {
+      Hash: false,
+      Toolbar: {
+        display: {
+          left: ['infobar'],
+          middle: [
+            'zoomIn',
+            'zoomOut',
+            'toggle1to1',
+            'rotateCCW',
+            'rotateCW',
+            'flipX',
+            'flipY',
+          ],
+          right: ['slideshow', 'thumbs', 'close'],
+        },
+      },
+    } as any)
+
+    return () => {
+      if (gridRef.current) {
+        Fancybox.unbind(gridRef.current)
+      }
+    }
+  }, [photos])
+
   const cols: Photo[][] = Array.from({ length: colCount }, () => [])
   photos.forEach((photo, i) => {
     cols[i % colCount].push(photo)
@@ -148,7 +205,7 @@ export default function PhotoWallGrid({ initialAlbum, event }: Props) {
           )}
         </div>
       ) : (
-        <div id="photo-wall-grid" className="flex gap-4 items-start">
+        <div ref={gridRef} id="photo-wall-grid" className="flex gap-4 items-start">
           {cols.map((colPhotos, colIdx) => (
             <div key={colIdx} className="flex-1 min-w-0 flex flex-col gap-4">
               {colPhotos.map((photo, row) => {

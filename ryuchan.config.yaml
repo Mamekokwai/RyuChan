@@ -52,11 +52,6 @@ site:
     music:
       title: Cloud Music
       subtitle: 沉浸式享受音乐时光
-  meting:
-    server: netease
-    id: '17933567326'
-    br: '400'
-    trans: true
   menu:
     - id: write
       text: 写作
@@ -101,6 +96,8 @@ anime:
     apiKey: ccb6e2ae2ae5f9247813a200ff26d8b3
     listId: '8659504'
 music:
+  # Meting API 基址：不要带 ?server=... 参数，脚本会自动拼接
+  api: https://meting.mikus.ink/api
   playlists:
     - id: '746335449'
       name: 我喜欢的
@@ -125,12 +122,21 @@ music:
       name: VOTRE CHÂTEAU
       server: netease
       type: id
+    - id: '7039749142'
+      name: 周杰伦（腾讯）
+      server: tencent
+    - id: '7559655733'
+      name: 王力宏
+      server: tencent
+    - id: '17966019560'
+      name: 告五人
+      server: netease
 github:
   owner: kobaridev
   repo: RyuChan
   branch: main
-  appId: 在部署端配置环境变量
-  encryptKey: wudishiduomejimo
+  appId: 2409511
+  encryptKey: KoBariDevYa
 umami:
   enable: true
   baseUrl: https://umami.nywerya.xyz
@@ -187,7 +193,7 @@ user:
         svg: ri:shopping-bag-line
 comments:
   enable: true
-  type: waline
+  type: twikoo
   giscus:
     repo: kobaridev/gsc
     repoId: R_kgDOPTM-mA
