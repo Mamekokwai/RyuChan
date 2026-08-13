@@ -4,7 +4,7 @@ description: >-
   A comprehensive guide on how to integrate the Waline comment system into your
   RyuChan blog
 pubDate: 2025-04-15T00:00
-image: /image/image4.jpg
+image: /image/image4.webp
 draft: false
 tags:
   - RyuChan

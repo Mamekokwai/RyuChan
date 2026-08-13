@@ -51,11 +51,6 @@ site:
     music:
       title: Cloud Music
       subtitle: 沉浸式享受音乐时光
-  meting:
-    server: netease
-    id: '17933567326'
-    br: '400'
-    trans: true
   menu:
     - id: write
       text: 写作
@@ -100,38 +95,30 @@ anime:
     apiKey: 08a6bef260044f70c150251c79f2e476
     listId: '8556173'
 music:
+  # Meting API 基址：不要带 ?server=... 参数，脚本会自动拼接
+  api: https://meting.mikus.ink/api
   playlists:
     - id: '17933567326'
       name: 我的喜欢
       server: netease
-    - id: zhoujielun
+    - id: '7039749142'
       name: 周杰伦
-      server: netease
-      type: custom
-    - id: '17964946766'
-      name: 陶喆
-      server: netease
-    - id: '17957187425'
-      name: 方大同
-      server: netease
-    - id: '17956985703'
-      name: G.E.M.邓紫棋
-      server: netease
-    - id: '17957136689'
-      name: 林俊杰
-      server: netease
-    - id: '17957661244'
-      name: 孙燕姿
-      server: netease
+      server: tencent
+    - id: '7559655733'
+      name: 王力宏
+      server: tencent
     - id: '17966019560'
       name: 告五人
       server: netease
+    - id: zhoujielun
+      name: 自定义
+      type: custom
 github:
   owner: kobaridev
   repo: RyuChan
   branch: main
-  appId: 在部署端配置环境变量
-  encryptKey: wudishiduomejimo
+  appId: 2409511
+  encryptKey: KoBariDevYa
 umami:
   enable: true
   baseUrl: https://umami.131714.xyz
@@ -185,7 +172,7 @@ user:
         svg: ri:telegram-line
 comments:
   enable: true
-  type: waline
+  type: twikoo
   giscus:
     repo: kobaridev/gsc
     repoId: R_kgDOPTM-mA
