@@ -5,7 +5,7 @@ import {
   SITE_FAVICON,
   SITE_LANGUAGE,
   SITE_THEME,
-  umamiConfig,
+  pageStatsConfig,
   SITE_PAGES,
 } from "@config";
 import { ClientRouter } from "astro:transitions";
@@ -36,6 +36,12 @@ const currentPath = Astro.url.pathname.replace("/", "") || "home";
 const pageConfig = SITE_PAGES?.[currentPath];
 const bannerTitle = pageConfig?.title || title || "";
 const bannerSubtitle = pageConfig?.subtitle || "";
+const statsAdapterUrl = pageStatsConfig.provider === "umami"
+  ? "/js/umami-share.js"
+  : pageStatsConfig.adapterUrl;
+const umamiOptions = pageStatsConfig.provider === "umami"
+  ? pageStatsConfig.options as unknown as { baseUrl?: string; websiteId?: string }
+  : undefined;
 ---
 
 <!doctype html>
@@ -58,20 +64,25 @@ const bannerSubtitle = pageConfig?.subtitle || "";
     />
     <title>{`${title} - ${SITE_TAB}`}</title>
 
-    <!-- Umami分析（自建） -->
+    <!-- Page analytics tracker and pluggable public stats adapter -->
     {
-      umamiConfig.enable && umamiConfig.websiteId && (
+      pageStatsConfig.enable && umamiOptions?.baseUrl && umamiOptions.websiteId && (
         <script
           is:inline
           defer
-          src={`${umamiConfig.baseUrl}/script.js`}
-          data-website-id={umamiConfig.websiteId}
+          src={`${umamiOptions.baseUrl}/script.js`}
+          data-website-id={umamiOptions.websiteId}
         />
       )
     }
     {
-      umamiConfig.enable && (
-        <script is:inline defer src="/js/umami-share.js"></script>
+      pageStatsConfig.enable && (
+        <script is:inline defer src="/js/page-stats.js"></script>
+      )
+    }
+    {
+      pageStatsConfig.enable && statsAdapterUrl && (
+        <script is:inline defer src={statsAdapterUrl}></script>
       )
     }
 

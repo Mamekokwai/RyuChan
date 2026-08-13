@@ -193,11 +193,12 @@ export interface MusicConfig {
   playlists?: PlaylistEntry[];
 }
 
-import type { UmamiConfig } from "../config";
+import type { PageStatsConfig, UmamiConfig } from "../config";
 export interface Config {
   site: SiteConfig;
   user: UserConfig;
   umami?: UmamiConfig;
+  statistics?: Omit<PageStatsConfig, "options"> & { options?: Record<string, unknown> };
   comments?: CommentsConfig;
   anime?: AnimeConfig;
   github?: GithubConfig;

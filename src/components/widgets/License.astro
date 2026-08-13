@@ -1,6 +1,6 @@
 ---  
 import dayjs from "@utils/dayjs";  
-import { USER_NAME, DATE_FORMAT, t, umamiConfig, USER_QR_WECHAT, USER_QR_ALIPAY } from "@config";  
+import { USER_NAME, DATE_FORMAT, t, pageStatsConfig, USER_QR_WECHAT, USER_QR_ALIPAY } from "@config";
 import type { PostData } from "@interfaces/data";  
 import { Icon } from "astro-icon/components";  
 import PostFilter from "./PostFilter.astro";  
@@ -96,7 +96,7 @@ const socialLinks = [
           }  
   
           {  
-            slug && umamiConfig.enable && (  
+            slug && pageStatsConfig.enable && (
               <>
                 <div class="flex items-center gap-1">  
                   <Icon name="lucide:eye" class="h-4 w-4 text-primary" />  
@@ -257,27 +257,26 @@ const socialLinks = [
   </dialog>
 </div>  
   
-{slug && umamiConfig.enable && (  
-  <script define:vars={{ slug, umamiConfig }} is:inline>  
+{slug && pageStatsConfig.enable && (
+  <script define:vars={{ slug, pageStatsConfig }} is:inline>
     // 获取浏览量统计  
     async function fetchLicensePageViews() {  
-      if (!umamiConfig.enable) {  
+      if (!pageStatsConfig.enable) {
         return;  
       }  
         
       const checkInterval = setInterval(async () => {
-        if (typeof window.fetchUmamiStats === 'function') {
+        if (typeof window.fetchPageStats === 'function') {
           clearInterval(checkInterval);
           try {
             const queryPath = `/blog/${slug}`;
             
-            const statsData = await window.fetchUmamiStats(umamiConfig.baseUrl, umamiConfig.shareId, {
-              timezone: umamiConfig.timezone,
+            const statsData = await window.fetchPageStats(pageStatsConfig, {
               path: queryPath
             });
             
-            const pageViews = (typeof statsData.pageviews === 'object' ? statsData.pageviews.value : statsData.pageviews) || 0;
-            const visits = (typeof statsData.visitors === 'object' ? statsData.visitors.value : statsData.visitors) || 0;
+            const pageViews = statsData.pageviews;
+            const visits = statsData.visitors;
             
             const viewsElement = document.getElementById('license-page-views');
             const visitorsElement = document.getElementById('license-page-visitors');

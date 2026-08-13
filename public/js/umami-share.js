@@ -67,9 +67,7 @@
       const params = new URLSearchParams({
         startAt: 0,
         endAt: currentTimestamp,
-        // unit: 'hour', // 暂时移除，视情况而定
         timezone: 'Asia/Shanghai',
-        compare: false,
         ...queryParams
       });
       
@@ -78,7 +76,9 @@
       
       const res = await fetch(statsUrl, {
         headers: {
-          'x-umami-share-token': token
+          'x-umami-share-token': token,
+          // Required by Umami v3; ignored by older compatible versions.
+          'x-umami-share-context': '1'
         }
       });
 
@@ -97,5 +97,36 @@
 
     return doFetch();
   };
+
+  if (global.PageStats) {
+    global.PageStats.registerProvider('umami', {
+      async fetch(config, queryParams) {
+        const fetchStats = path => global.fetchUmamiStats(config.baseUrl, config.shareId, {
+          timezone: config.timezone,
+          ...queryParams,
+          ...(path ? { path } : {})
+        });
+
+        if (!queryParams.path || queryParams.path === '/') {
+          return fetchStats(queryParams.path);
+        }
+
+        // Static hosts may record the same article with or without a trailing slash.
+        // Prefer the canonical slash form, then fall back for older/external records.
+        const canonicalPath = queryParams.path.endsWith('/')
+          ? queryParams.path
+          : `${queryParams.path}/`;
+        const stats = await fetchStats(canonicalPath);
+        const pageviews = Number(stats?.pageviews?.value ?? stats?.pageviews) || 0;
+        const visitors = Number(stats?.visitors?.value ?? stats?.visitors ?? stats?.visits) || 0;
+
+        if (pageviews || visitors || canonicalPath === queryParams.path) {
+          return stats;
+        }
+
+        return fetchStats(queryParams.path);
+      }
+    });
+  }
 
 })(window);

@@ -137,3 +137,19 @@ export const umamiConfig: UmamiConfig = {
   websiteId: config.umami?.websiteId ?? "",
   timezone: config.umami?.timezone ?? "Asia/Shanghai",
 };
+
+export interface PageStatsConfig {
+  enable: boolean;
+  provider: string;
+  adapterUrl?: string;
+  options: Record<string, unknown>;
+}
+
+// Keep the existing Umami configuration working while allowing another
+// provider to be selected without changing the display components.
+export const pageStatsConfig: PageStatsConfig = {
+  enable: config.statistics?.enable ?? umamiConfig.enable,
+  provider: config.statistics?.provider ?? "umami",
+  adapterUrl: config.statistics?.adapterUrl,
+  options: config.statistics?.options ?? { ...umamiConfig },
+};

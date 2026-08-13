@@ -1,6 +1,6 @@
 ---  
 import { Icon } from "astro-icon/components";  
-import { t, umamiConfig } from "@config";  
+import { t, pageStatsConfig } from "@config";
 import type { PostData } from "@interfaces/data";  
 const { pubDate, badge, word, time, url, hideViews = false } = Astro.props as PostData & { url?: string, hideViews?: boolean };  
   
@@ -32,7 +32,7 @@ const slug = url ? url.split('/').filter(Boolean).pop() : undefined;
       <Icon name="lucide:book-open" class="h-4 w-4 flex-shrink-0" />  
       <span class="truncate">{word} {t("label.wordCount")} · {time} {t("label.readTime")}</span>  
     </div>  
-    {!hideViews && slug && umamiConfig.enable && (  
+    {!hideViews && slug && pageStatsConfig.enable && (
       <>
         <div class="flex items-center gap-1">  
           <Icon name="lucide:eye" class="h-4 w-4 flex-shrink-0 text-primary" />  
@@ -47,29 +47,28 @@ const slug = url ? url.split('/').filter(Boolean).pop() : undefined;
   </div>  
 </div>  
   
-{!hideViews && slug && umamiConfig.enable && (  
-  <script define:vars={{ slug, umamiConfig }} is:inline>
+{!hideViews && slug && pageStatsConfig.enable && (
+  <script define:vars={{ slug, pageStatsConfig }} is:inline>
     // 获取文章浏览量统计，支持 websiteId 或 shareId
     async function fetchPostViews() {
-      if (!umamiConfig.enable) {
+      if (!pageStatsConfig.enable) {
         return;
       }
       
       const checkInterval = setInterval(async () => {
-        if (typeof window.fetchUmamiStats === 'function') {
+        if (typeof window.fetchPageStats === 'function') {
           clearInterval(checkInterval);
           try {
             // RyuChan assumes blog posts are at /blog/slug
             // Adjust this path if your URL structure is different
             const queryPath = `/blog/${slug}`;
             
-            const statsData = await window.fetchUmamiStats(umamiConfig.baseUrl, umamiConfig.shareId, {
-              timezone: umamiConfig.timezone,
+            const statsData = await window.fetchPageStats(pageStatsConfig, {
               path: queryPath
             });
             
-            const pageViews = (typeof statsData.pageviews === 'object' ? statsData.pageviews.value : statsData.pageviews) || 0;
-            const visits = (typeof statsData.visitors === 'object' ? statsData.visitors.value : statsData.visitors) || 0;
+            const pageViews = statsData.pageviews;
+            const visits = statsData.visitors;
             
             const viewsElement = document.getElementById(`page-views-${slug}`);
             const visitorsElement = document.getElementById(`page-visitors-${slug}`);

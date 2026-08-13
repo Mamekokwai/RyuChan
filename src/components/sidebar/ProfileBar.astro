@@ -1,5 +1,5 @@
 ---  
-import { USER_AVATAR, USER_SIDEBAR_SOCIAL_ICONS, umamiConfig, USER_DESCRIPTION, USER_NAME } from "../../config";  
+import { USER_AVATAR, USER_SIDEBAR_SOCIAL_ICONS, pageStatsConfig, USER_DESCRIPTION, USER_NAME } from "../../config";
 import { Icon } from "astro-icon/components";   
 import { Image } from "astro:assets";  
 import { getAllPosts, getCategoriesWithPosts, getTagsWithCount } from "@utils/blogUtils";  
@@ -113,7 +113,7 @@ tagEntries.sort((a, b) => b[1] - a[1]); // 按使用频率排序
     </div>  
       
     <!-- 全站访问量统计 -->  
-    {umamiConfig.enable && (
+    {pageStatsConfig.enable && (
       <div class="grid grid-cols-2 mt-3 pt-3 border-t border-base-content/20">
           <div class="text-center">
               <div class="text-xs text-base-content/50 mb-1 flex items-center justify-center gap-1">
@@ -233,13 +233,13 @@ tagEntries.sort((a, b) => b[1] - a[1]); // 按使用频率排序
   )}  
 </div>
   
-<script is:inline define:vars={{ umamiConfig }}> 
+<script is:inline define:vars={{ pageStatsConfig }}>
   // 使用 sessionStorage 来避免重复加载  
   let statsData = null;  
     
   // 获取全站访问量统计  
   async function loadSiteStats() {  
-    if (!umamiConfig.enable) {  
+    if (!pageStatsConfig.enable) {
       return;  
     }
     
@@ -266,16 +266,14 @@ tagEntries.sort((a, b) => b[1] - a[1]); // 按使用频率排序
           
     // 2. 缓存不存在或已过期，发起新请求
     const checkInterval = setInterval(async () => {
-      if (typeof window.fetchUmamiStats === 'function') {
+      if (typeof window.fetchPageStats === 'function') {
         clearInterval(checkInterval);
         try {
-          const stats = await window.fetchUmamiStats(umamiConfig.baseUrl, umamiConfig.shareId, {
-            timezone: umamiConfig.timezone
-          });
+          const stats = await window.fetchPageStats(pageStatsConfig);
           
           statsData = { 
-            pageviews: (typeof stats.pageviews === 'object' ? stats.pageviews.value : stats.pageviews) || 0, 
-            visitors: (typeof stats.visitors === 'object' ? stats.visitors.value : stats.visitors) || 0 
+            pageviews: stats.pageviews,
+            visitors: stats.visitors
           };
 
           // 存入缓存，包含当前时间戳
@@ -365,7 +363,7 @@ function initTagsToggle() {
 
   // 初始化函数  
   function init() {  
-    if (umamiConfig.enable) {
+    if (pageStatsConfig.enable) {
       // 总是加载最新数据，以保持实时更新
       loadSiteStats();  
     }
