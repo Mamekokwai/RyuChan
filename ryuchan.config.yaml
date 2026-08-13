@@ -99,17 +99,10 @@ music:
   # Meting API 基址：不要带 ?server=... 参数，脚本会自动拼接
   api: https://meting.mikus.ink/api
   playlists:
-    - id: '746335449'
-      name: 我喜欢的
-      server: netease
     - id: '18008527562'
       name: Flower of Life
       server: netease
       type: id
-    - id: zhoujielun
-      name: 周杰伦
-      server: netease
-      type: custom
     - id: '18004279667'
       name: Dreamścape
       server: netease
@@ -122,15 +115,6 @@ music:
       name: VOTRE CHÂTEAU
       server: netease
       type: id
-    - id: '7039749142'
-      name: 周杰伦（腾讯）
-      server: tencent
-    - id: '7559655733'
-      name: 王力宏
-      server: tencent
-    - id: '17966019560'
-      name: 告五人
-      server: netease
 github:
   owner: kobaridev
   repo: RyuChan
