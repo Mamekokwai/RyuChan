@@ -67,9 +67,7 @@
       const params = new URLSearchParams({
         startAt: 0,
         endAt: currentTimestamp,
-        // unit: 'hour', // 暂时移除，视情况而定
         timezone: 'Asia/Shanghai',
-        compare: false,
         ...queryParams
       });
       
@@ -78,7 +76,9 @@
       
       const res = await fetch(statsUrl, {
         headers: {
-          'x-umami-share-token': token
+          'x-umami-share-token': token,
+          // Umami v3 requires an explicit share context for share-token requests.
+          'x-umami-share-context': '1'
         }
       });
 

@@ -13,7 +13,7 @@ tags:
   - nginx
   - tutorial
 categories:
-  - 教程
+  - 资源
 slug: bypass-ubuntu-repo-use-official
 cover: 发布/注释/添加官方仓库并跳过Ubuntu维护版本-cover.png
 summary: 绕开 Ubuntu 保守的软件仓库，从官方源直装最新版——以 Nginx 为例，附排雷指南。
