@@ -9,7 +9,7 @@ const id = Astro.url.searchParams.get("id") || "";
 const album = id ? albums.find((a) => a.id === id) : null;
 ---
 
-<BaseLayout title={album ? album.event : `照片集`} description={album?.description}>
+<BaseLayout title={album ? album.event : `照片集`} description={album?.description} isIndexed={false}>
   <div class="mb-10" style={album ? `view-transition-name: album-${album.id}` : ""}>
     <div class="mb-4">
       <h1 class="text-3xl md:text-4xl font-bold flex items-center gap-3">
