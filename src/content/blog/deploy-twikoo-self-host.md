@@ -5,11 +5,10 @@ pubDate: 2026-05-29
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/Twikoo-cover.png
 draft: false
 tags:
-  - comment
-  - docker
-  - linux
-  - self-host
-  - tutorial
+  - Twikoo
+  - 评论
+  - Docker
+  - 自托管
 categories:
   - 教程
 slug: deploy-twikoo-self-host

@@ -61,7 +61,7 @@ const slug = url ? url.split('/').filter(Boolean).pop() : undefined;
           try {
             // RyuChan assumes blog posts are at /blog/slug
             // Adjust this path if your URL structure is different
-            const queryPath = `/blog/${slug}`;
+            const queryPath = `/blog/${slug}/`;
             
             const statsData = await window.fetchUmamiStats(umamiConfig.baseUrl, umamiConfig.shareId, {
               timezone: umamiConfig.timezone,

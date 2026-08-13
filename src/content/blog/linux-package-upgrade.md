@@ -7,9 +7,9 @@ pubDate: 2026-05-31T16:48
 image: /images/linux-package-upgrade/0ddfa5cc6ec8146d.png
 draft: false
 tags:
+  - Linux
+  - 包管理
   - 指令
-  - linux
-  - package-management
 categories:
   - 教程
 slug: linux-package-upgrade

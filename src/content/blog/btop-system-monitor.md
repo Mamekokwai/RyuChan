@@ -5,11 +5,9 @@ pubDate: 2026-06-13T13:00
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/btop-cover.png
 draft: false
 tags:
-  - linux
-  - terminal
-  - monitoring
-  - tool
-  - tutorial
+  - Linux
+  - btop
+  - 监控
 categories:
   - 教程
 slug: btop-system-monitor

@@ -46,6 +46,8 @@ Release Platform:
 - `slug` 与文件名一致，英文小写短横线；**不能包含 `syncthing`**（会被 `.gitignore` 第 39 行 `*syncthing*` 排除）
 - `original` 指向 Obsidian vault 原始笔记，用 wikilink 绝对路径 `[[路径/文件名|显示名]]`，写前先确认笔记存在
 - `draft: false` 才会在生产环境显示
+- 标签 `tags` 2~4 个、语义不重叠：删除 `tutorial`（与 `type` 字段重复）及被更具体标签覆盖的冗余（如 `linux` 被 `Ubuntu`/`自托管` 覆盖）
+- 标签中文化规范：通用词用中文（`自托管`/`评论`/`统计`/`监控`/`图床`/`包管理`/`软件源`），专有名词保留英文（`Nginx`/`Docker`/`Syncthing`/`Twikoo`/`Waline`/`Umami`/`N2N`/`one-api`/`GNOME`/`btop`/`SEO`/`Google`/`HTTP`/`UTF-8`/`Web`）
 
 ## 图床 CDN 规则
 
@@ -60,6 +62,7 @@ Release Platform:
 2. 操作前读 `E:\Note\Obsidian` vault 根目录 `CLAUDE.md`，了解笔记目录与命名约定
 3. 新建/重命名前先搜索确认目标不存在，避免重复文章
 4. 修改 frontmatter 或正文用最小化编辑，不整文件重写
+7. 从外部（Obsidian 等）导入文章时，frontmatter 的 `tags` 常是原始英文/冗余格式，须按上述「标签中文化规范」重新编辑后再发布
 5. 改动后可运行 `pnpm run check` 验证类型
 6. 任务结束时，把本次变更写回「记忆」章节（更新清单 + 追加变更日志）
 
@@ -88,4 +91,5 @@ Release Platform:
 ### 变更日志
 
 - 2026-08-13 建立记忆章节，整理已发布/待发布清单
+- 2026-08-13 统一全站 13 篇文章 `tags`（中文化 + 去冗余：删 `tutorial` 和冗余 `linux`/`self-host`，专有名词保留英文）；扩写 `ca51f2-sdk-share` 为完整教程
 - 2026-08-13 新增规则「正文不重复放封面图」；修复 `p2p-file-sync-setup` 正文冗余封面图

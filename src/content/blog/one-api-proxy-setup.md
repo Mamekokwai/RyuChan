@@ -6,10 +6,9 @@ image: https://photo.nywerya.xyz/Obsidian/发布/注释/OneAPI-cover.png
 draft: false
 tags:
   - one-api
-  - docker
-  - ai
-  - self-host
-  - tutorial
+  - AI
+  - Docker
+  - 自托管
 categories:
   - 教程
 slug: one-api-proxy-setup

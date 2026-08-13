@@ -5,12 +5,10 @@ pubDate: 2026-06-12T12:30
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/Umami-cover.png
 draft: false
 tags:
-  - umami
-  - analytics
-  - docker
-  - nginx
-  - self-host
-  - tutorial
+  - Umami
+  - 统计
+  - Docker
+  - 自托管
 categories:
   - 教程
 slug: self-host-umami-analytics

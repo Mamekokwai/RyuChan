@@ -5,11 +5,10 @@ pubDate: 2026-06-12T13:20
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/N2N-cover.png
 draft: false
 tags:
-  - n2n
-  - vpn
-  - gaming
-  - self-host
-  - tutorial
+  - N2N
+  - 虚拟局域网
+  - 游戏
+  - 自托管
 categories:
   - 教程
 slug: n2n-virtual-lan-setup

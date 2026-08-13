@@ -7,9 +7,9 @@ pubDate: 2026-06-02
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/SEO-自建博客搜索优化实战-cover.png
 draft: false
 tags:
-  - seo
-  - blog
-  - google
+  - SEO
+  - 博客
+  - Google
 categories:
   - 教程
 slug: self-hosted-blog-seo-guide

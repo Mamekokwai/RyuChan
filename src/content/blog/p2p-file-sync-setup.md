@@ -5,10 +5,9 @@ pubDate: 2026-06-11T21:15
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/Syncthing-cover.png
 draft: false
 tags:
-  - syncthing
-  - nginx
-  - self-host
-  - tutorial
+  - Syncthing
+  - Nginx
+  - 自托管
 categories:
   - 教程
 slug: p2p-file-sync-setup

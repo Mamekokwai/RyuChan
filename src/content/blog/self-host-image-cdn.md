@@ -5,10 +5,9 @@ pubDate: 2026-06-12T12:30
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/自建图床-cover.png
 draft: false
 tags:
-  - image-hosting
-  - nginx
-  - self-host
-  - tutorial
+  - 图床
+  - Nginx
+  - 自托管
 categories:
   - 教程
 slug: self-host-image-cdn

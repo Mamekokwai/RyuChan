@@ -7,11 +7,10 @@ pubDate: 2026-06-03
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/URL编码-中文链接变形记-cover.png
 draft: false
 tags:
-  - url-encoding
-  - http
-  - utf-8
-  - web
-  - tutorial
+  - URL编码
+  - HTTP
+  - UTF-8
+  - Web
 categories:
   - 教程
 slug: url-encoding-chinese-links

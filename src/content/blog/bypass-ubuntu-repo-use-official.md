@@ -7,11 +7,10 @@ pubDate: 2026-05-31
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/添加官方仓库并跳过Ubuntu维护版本-cover.png
 draft: false
 tags:
-  - linux
-  - package-management
+  - Ubuntu
+  - 软件源
   - apt
-  - nginx
-  - tutorial
+  - Nginx
 categories:
   - 资源
 slug: bypass-ubuntu-repo-use-official

@@ -7,10 +7,9 @@ pubDate: 2026-06-04
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/GNOME剪贴板管理器-ClipboardIndicator - cover.png
 draft: false
 tags:
-  - gnome
-  - extension
-  - clipboard
-  - linux
+  - GNOME
+  - 剪贴板
+  - 扩展
 categories:
   - 教程
 slug: gnome-clipboard-indicator
