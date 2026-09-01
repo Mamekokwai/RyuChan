@@ -4,6 +4,7 @@ import AlbumGrid from "@components/admin/AlbumGrid";
 import AlbumAdmin from "@components/admin/AlbumAdmin";
 import AlbumToolbar from "@components/admin/AlbumToolbar";
 import { Icon } from "astro-icon/components";
+import { umamiConfig } from "@config";
 ---
 
 <BaseLayout title="绘日记" description="用画笔记录每一年的故事" isIndexed={false}>
@@ -13,7 +14,16 @@ import { Icon } from "astro-icon/components";
         <Icon name="lucide:palette" class="text-primary" />
         <span>绘日记</span>
       </h1>
-      <AlbumToolbar client:only="react" />
+      <div class="flex items-center gap-3">
+        {umamiConfig.enable && (
+          <div class="flex items-center gap-1.5 text-sm text-base-content/70" title="画廊访问量">
+            <Icon name="lucide:eye" class="w-4 h-4 text-primary" />
+            <span>访问量</span>
+            <span id="album-page-views">-</span>
+          </div>
+        )}
+        <AlbumToolbar client:only="react" />
+      </div>
     </div>
     <p class="text-muted-foreground text-lg">
       每一笔都是时光的印记，每张画都是一个世界。
@@ -32,3 +42,39 @@ import { Icon } from "astro-icon/components";
 </BaseLayout>
 
 <AlbumAdmin client:only="react" />
+
+{umamiConfig.enable && (
+  <script is:inline define:vars={{ umamiConfig }}>
+    async function loadAlbumPageViews() {
+      const viewsElement = document.getElementById("album-page-views");
+      if (!viewsElement || !umamiConfig.enable) return;
+
+      const checkInterval = setInterval(async () => {
+        if (typeof window.fetchUmamiStats !== "function") return;
+        clearInterval(checkInterval);
+
+        try {
+          const path = window.location.pathname.endsWith("/")
+            ? window.location.pathname
+            : `${window.location.pathname}/`;
+          const stats = await window.fetchUmamiStats(umamiConfig.baseUrl, umamiConfig.shareId, {
+            timezone: umamiConfig.timezone,
+            path,
+          });
+          const pageViews =
+            (typeof stats.pageviews === "object" ? stats.pageviews.value : stats.pageviews) || 0;
+          viewsElement.textContent = `${new Intl.NumberFormat().format(pageViews)} 次`;
+        } catch (error) {
+          console.error("获取画廊访问量失败:", error);
+          viewsElement.textContent = "-";
+        }
+      }, 100);
+
+      setTimeout(() => clearInterval(checkInterval), 10000);
+    }
+
+    document.addEventListener("astro:page-load", loadAlbumPageViews);
+    if (document.readyState === "complete") loadAlbumPageViews();
+    else document.addEventListener("DOMContentLoaded", loadAlbumPageViews);
+  </script>
+)}
