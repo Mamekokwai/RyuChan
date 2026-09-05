@@ -1,4 +1,4 @@
----
+﻿---
 title: Codex 完成对话音效通知：跨 AI 配置教程
 description: 让 Codex 在整轮对话真正结束时只播放一次 WAV 音效——只响应 agent-turn-complete，不等待播放结束、不弹播放器窗口。提供可直接交给其他 AI 的通用配置提示词。
 pubDate: 2026-09-02
@@ -31,14 +31,13 @@ Release Platform:
 - 不弹出播放器窗口。
 
 > 使用方法：将本文发送给你心爱的 AI 即可。
-
 ## 核心原理
 
 Codex 的用户级配置文件位于 `~/.codex/config.toml`。`notify` 会启动一个外部程序，并向它传递通知参数。当前官方支持的完成事件是 `agent-turn-complete`。
 
 因此，在 Windows 上最稳定、速度最快的方案是：
 
-```
+```text
 Codex notify
     ↓
 cmd.exe 启动后台播放命令
@@ -52,8 +51,10 @@ ffplay 播放 WAV，立即释放 Codex
 
 以下示例使用：
 
-- 音频文件：`E:\Note\Obsidian\notification_accomplished_04.wav`
-- ffplay：`C:\msys64\ucrt64\bin\ffplay.exe`
+```text
+音频文件：E:\Note\Obsidian\notification_accomplished_04.wav
+ffplay：C:\msys64\ucrt64\bin\ffplay.exe
+```
 
 在 `C:\Users\你的用户名\.codex\config.toml` 中加入或更新：
 
@@ -123,8 +124,8 @@ notification.get("type") == "agent-turn-complete"
 
 下面的提示词可以直接交给其他 AI：
 
-```
-请帮我为本机 Codex 配置"每轮对话结束后播放一次 WAV 音效"。
+```text
+请帮我为本机 Codex 配置“每轮对话结束后播放一次 WAV 音效”。
 
 目标行为：只在 Codex 一轮 Agent 回复真正结束、触发 agent-turn-complete 时播放一次；工具调用、权限请求、中间状态不要播放。播放器必须后台运行，不能让 Codex 等待音频结束，也不能弹出播放器窗口。
 
@@ -138,7 +139,7 @@ notification.get("type") == "agent-turn-complete"
 6. 保留 config.toml 原有内容，只新增或更新 notify；正确处理 TOML 中的 Windows 反斜杠。
 7. 修改后验证：配置能解析，音频文件和播放器存在，直接运行包装器能启动播放器并快速返回。
 8. 提醒我完全退出并重新打开 Codex，再发送一轮完整测试消息。
-9. 最后明确列出修改了哪些文件和实际播放器路径，不要只回复"已完成"。
+9. 最后明确列出修改了哪些文件和实际播放器路径，不要只回复“已完成”。
 
 我的 WAV 音频文件路径是：在这里填入绝对路径
 ```
