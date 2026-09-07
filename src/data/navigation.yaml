@@ -1,3 +1,15 @@
+- title: 我的作品
+  icon: lucide:palette
+  items:
+    - name: Codeflower
+      avatar: /images/codeflower.svg
+      description: Nywerya 的数字植物标本馆，探索花与代码的交互艺术
+      url: /Codeflower.html
+      category: 我的作品
+      id: ART001
+      badge: 原创作品
+      badgeIcon: lucide:sparkles
+      badgeColor: '#80ded0'
 - title: 开发工具
   icon: lucide:code
   items:
