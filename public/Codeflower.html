@@ -82,13 +82,14 @@ $('studio').querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('clic
 document.querySelectorAll('.specimen-card').forEach(card=>{card.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const b=card.getBoundingClientRect();card.style.setProperty('--mx',(e.clientX-b.left)/b.width*100+'%');card.style.setProperty('--my',(e.clientY-b.top)/b.height*100+'%');},{passive:true});card.addEventListener('pointerleave',()=>{card.style.removeProperty('--mx');card.style.removeProperty('--my');});});
 const motionQuery=matchMedia('(prefers-reduced-motion: reduce)');let reduced=motionQuery.matches;
 // Passive, frame-batched scroll reads. The browser keeps ownership of page scrolling.
-const scrollMotion={hero:0},studio=$('studio'),heading=document.querySelector('h1');let scrollFrame=0;
+const scrollMotion={hero:0},studio=$('studio'),heading=document.querySelector('h1'),headerEl=document.querySelector('header'),exploreNav=document.querySelector('.explore-nav');let scrollFrame=0;
 function updateScroll(){scrollFrame=0;const max=document.documentElement.scrollHeight-innerHeight,progress=max>0?Math.min(1,Math.max(0,scrollY/max)):0,b=studio.getBoundingClientRect();
 scrollMotion.hero=reduced||exhibition.open?0:Math.min(1,Math.max(0,-b.top/Math.max(1,b.height)));
 $('scroll-progress').style.transform='scaleX('+progress+')';
 $('aura-near').style.transform=reduced?'none':'translate3d('+(-progress*100)+'px,'+(-progress*180)+'px,0)';
 $('aura-far').style.transform=reduced?'none':'translate3d('+(progress*120)+'px,'+(progress*90)+'px,0)';
-heading.style.transform=reduced||innerWidth<=700?'none':'translate3d(0,'+(scrollMotion.hero*65)+'px,0)';}
+heading.style.transform=reduced||innerWidth<=700?'none':'translate3d(0,'+(scrollMotion.hero*65)+'px,0)';
+if(!reduced&&!exhibition.open){headerEl.style.transform='translate3d(0,'+(progress*-14)+'px,0)';exploreNav.style.transform='translate3d(0,'+(progress*22)+'px,0)';exploreNav.style.opacity=String(.7+progress*.3);}}
 function queueScroll(){if(!scrollFrame)scrollFrame=requestAnimationFrame(updateScroll);}
 addEventListener('scroll',queueScroll,{passive:true});addEventListener('resize',queueScroll,{passive:true});motionQuery.addEventListener('change',e=>{reduced=e.matches;queueScroll();});
 new ResizeObserver(queueScroll).observe(document.querySelector('.page'));queueScroll();
