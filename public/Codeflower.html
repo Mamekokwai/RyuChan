@@ -47,12 +47,16 @@ main{grid-template-columns:36% 64%}.story{padding-top:50px}.eyebrow{font-size:9p
 @media(prefers-reduced-motion:reduce){.specimen-card:hover{translate:none}}
 </style>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+<style>
+.bloom-caption{position:absolute;z-index:3;top:75px;left:5%;pointer-events:none;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .5s;color:#bcfbe6;text-shadow:0 0 25px #6fffd655}.bloom-caption.active{opacity:1;transform:none}.bloom-caption small{display:block;font:7px var(--mono);letter-spacing:2px;color:#9abaa8}.bloom-caption span{display:block;margin:7px 0 12px;font:italic 36px var(--serif);letter-spacing:-1px}.bloom-caption i{display:block;height:1px;width:125px;background:linear-gradient(90deg,#a6ffe1,#a887ff);transform:scaleX(var(--sequence,0));transform-origin:left;box-shadow:0 0 10px #99f9d9}.exhibition .bloom-caption span{font-size:45px}@media(max-width:700px){.bloom-caption{top:50px}.bloom-caption span,.exhibition .bloom-caption span{font-size:25px}.bloom-caption small{font-size:6px;letter-spacing:1px}.bloom-caption i{width:85px}}
+@media(prefers-reduced-motion:reduce){.bloom-caption{transition:none;transform:none}}
+</style>
 </head>
 <body><div class="atmosphere" aria-hidden="true"><div class="aura" id="aura-near"></div><div class="aura violet" id="aura-far"></div></div><div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div><div class="page">
 <a class="skip-link" href="#studio">跳到互动标本</a><header><a class="brand" href="#observatory" aria-label="Codeflower 回到观察台"><svg class="brand-mark" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#99f5df"/><stop offset="1" stop-color="#b19aef"/></linearGradient><path id="p" d="M32 32C17 24 21 7 32 6C43 7 47 24 32 32Z"/></defs><rect width="64" height="64" rx="15" fill="#080e14"/><g fill="none" stroke="url(#g)" stroke-width="1.8"><use href="#p" transform="rotate(0 32 32)"/><use href="#p" transform="rotate(60 32 32)"/><use href="#p" transform="rotate(120 32 32)"/><use href="#p" transform="rotate(180 32 32)"/><use href="#p" transform="rotate(240 32 32)"/><use href="#p" transform="rotate(300 32 32)"/></g><circle cx="32" cy="32" r="4" fill="#cffcea"/></svg> CODEFLOWER</a><span class="header-note">AN INDEPENDENT EXHIBITION BY NYWERYA</span><nav class="archive" aria-label="展览导览"><a href="#collection">作品 / 01</a><a href="#fieldnotes">手记 / 02</a><a href="#about">关于 ↗</a></nav></header>
 <main id="observatory"><section class="story"><div class="eyebrow"><span class="dot"></span> BOTANICAL COMPUTATION / 001</div><h1>Life,<br>written in<br><em>code.</em></h1><p class="intro">将逻辑编织成花瓣。<br>在精确的坐标里，发现生长的自由。</p><div class="badge" id="specimen-badge">SPECIMEN A &nbsp;—&nbsp; DIGITAL IRIS</div><div class="actions"><button class="primary" id="bloom" disabled><span aria-hidden="true">✳</span> 让代码绽放 ↗</button><button class="reset" id="reset" disabled>↺ 重置视角</button></div><section class="terminal" aria-label="缓慢更新的生成代码"><div class="terminal-head"><span>SOURCE / GROWTH.LOG</span><i id="live-label">● LIVE</i></div><div class="lines" id="lines"></div><div class="legend"><span>LOGIC</span><span>IMAGINATION</span></div></section></section>
 <div class="studio" id="studio"><section class="specimen" aria-label="可交互三维数字鸢尾标本"><div class="stage-tools"><button class="view-mode" id="view-mode" aria-haspopup="dialog" aria-controls="exhibition"><span aria-hidden="true">⤢</span> 沉浸观赏</button></div><div class="artwork-watermark" id="artwork-watermark" aria-hidden="true">Iris.</div><div class="artwork-caption" aria-hidden="true">LIVING STUDY / <span id="artwork-number">A.001</span><em>Rendered, not grown.</em></div><div class="viewport" id="viewport"></div><div class="hud top-label"><span><strong>FIG. 001</strong> &nbsp;/&nbsp; IRIS ALGORITHMICUS</span><span>3D / LIVE SPECIMEN</span></div><div class="hud bracket"></div><div class="hud bracket bottom"></div><div class="hud ruler"></div><div class="hud callout"><b>PETAL MEMBRANE</b><br>CODE-BASED ORGANISM</div><div class="hud coordinates">ORIGIN &nbsp; 0.000 / 0.000 / 0.000<br>TOPOLOGY &nbsp; 16 PETALS · RADIAL</div><div class="hud view-bottom"><div class="hint">拖拽旋转 · 滚轮缩放 · 点击花瓣<small>INERTIAL ORBIT / SMOOTH DOLLY</small></div><div class="state"><span id="state" role="status" aria-live="polite">INITIALIZING</span><small id="cycle">CYCLE 000 / AWAITING INPUT</small></div></div><div class="loading" id="loading" role="status">正在构建数字标本…</div></section>
-<aside class="control-dock" aria-label="花朵实时控制台"><div class="dock-head"><span class="eyebrow"><span class="dot"></span> LIVE / 生长控制台</span><select id="species-select" aria-label="切换花朵标本" disabled><option value="iris">A / 数字鸢尾</option><option value="lotus">B / 递归莲</option><option value="aster">C / 星芒菊</option></select></div><div class="lab-controls"><div><div class="control-title">光谱 / SPECTRUM</div><div class="swatches" role="group" aria-label="花瓣配色"><button class="swatch" data-palette="aurora" style="--color:linear-gradient(90deg,#69eddf,#ae84ff)" aria-pressed="true" disabled>极光</button><button class="swatch" data-palette="glacier" style="--color:linear-gradient(90deg,#b4f5ff,#4689ef)" aria-pressed="false" disabled>冰川</button><button class="swatch" data-palette="dusk" style="--color:linear-gradient(90deg,#efa4cb,#9761ff)" aria-pressed="false" disabled>暮色</button></div></div><div><label class="control-title" for="bloom-speed">绽放时长 <output id="duration-value">3.8 s</output></label><input id="bloom-speed" type="range" min="2" max="6" step="0.2" value="3.8" aria-describedby="duration-hint" disabled></div><div><div class="control-title">时间 / TIME</div><button class="toggle" id="pause" aria-pressed="false" disabled>Ⅱ 暂停生长</button></div></div><div class="dock-actions"><button class="toggle" id="dock-bloom" disabled>✳ 让代码绽放</button><button class="reset" id="dock-reset" disabled>↺ 重置视角</button></div><div class="dock-foot"><span id="duration-hint">时长在下次绽放生效 · 暂停后仍可旋转</span><a href="#lab">查看实时档案 ↗</a></div></aside></div></main>
+<aside class="control-dock" aria-label="花朵实时控制台"><div class="dock-head"><span class="eyebrow"><span class="dot"></span> LIVE / 生长控制台</span><select id="species-select" aria-label="切换花朵标本" disabled><option value="iris">A / 数字鸢尾</option><option value="lotus">B / 递归莲</option><option value="aster">C / 星芒菊</option></select></div><div class="lab-controls"><div><div class="control-title">光谱 / SPECTRUM</div><div class="swatches" role="group" aria-label="花瓣配色"><button class="swatch" data-palette="aurora" style="--color:linear-gradient(90deg,#69eddf,#ae84ff)" aria-pressed="true" disabled>极光</button><button class="swatch" data-palette="glacier" style="--color:linear-gradient(90deg,#b4f5ff,#4689ef)" aria-pressed="false" disabled>冰川</button><button class="swatch" data-palette="dusk" style="--color:linear-gradient(90deg,#efa4cb,#9761ff)" aria-pressed="false" disabled>暮色</button></div></div><div><label class="control-title" for="bloom-speed">绽放时长 <output id="duration-value">5.2 s</output></label><input id="bloom-speed" type="range" min="2" max="8" step="0.2" value="5.2" aria-describedby="duration-hint" disabled></div><div><div class="control-title">时间 / TIME</div><button class="toggle" id="pause" aria-pressed="false" disabled>Ⅱ 暂停生长</button></div></div><div class="dock-actions"><button class="toggle" id="dock-bloom" disabled>✳ 让代码绽放</button><button class="reset" id="dock-reset" disabled>↺ 重置视角</button></div><div class="dock-foot"><span id="duration-hint">时长在下次绽放生效 · 暂停后仍可旋转</span><a href="#lab">查看实时档案 ↗</a></div></aside></div></main>
 <nav class="explore-nav" aria-label="探索标本馆"><a href="#collection">01 / 标本集 ↓</a><a href="#lab">02 / 生长实验室 ↓</a><a href="#fieldnotes">03 / 观察手记 ↓</a><span class="signature">CREATED BY <b>Nywerya</b></span></nav>
 <section class="interlude" aria-labelledby="curatorial-note"><div class="eyebrow">CURATORIAL NOTE<br>001 — ON BECOMING</div><p id="curatorial-note">A study in precision.<br>An exercise in <em>being alive.</em></p><p class="margin-note">一场关于计算与生命的持续实验。<br>没有两次触碰，抵达同样的瞬间。<br><br>CONCEIVED & CRAFTED BY NYWERYA</p></section>
 <section class="chapter" id="collection"><div class="chapter-head"><div><div class="eyebrow">01 / THE COLLECTION</div><h2>三种形态，同一颗 <em>seed.</em></h2></div><p>这里收藏的是代码想象出的植物。<br>选一份标本，让它在上方的观察台里生长。</p></div><div class="collection">
@@ -124,7 +128,7 @@ const root=new T.Group();root.rotation.set(-.35,.25,-.2);scene.add(root);
 const cyan=new T.Color('#69eddf'),purple=new T.Color('#ae84ff'),petals=[],animations=[];
 const species={iris:{name:'数字鸢尾',title:'DIGITAL IRIS',latin:'IRIS ALGORITHMICUS',id:'A',counts:[9,7],lengths:[2.8,1.65],widths:[.73,.45],lift:.28},lotus:{name:'递归莲',title:'RECURSIVE LOTUS',latin:'LOTUS RECURSIVA',id:'B',counts:[12,12],lengths:[2.6,1.65],widths:[.98,.64],lift:.52},aster:{name:'星芒菊',title:'SIGNAL ASTER',latin:'ASTER SIGNALIS',id:'C',counts:[18,12],lengths:[2.9,1.5],widths:[.27,.25],lift:.16}};
 const palettes={aurora:['#69eddf','#ae84ff','极光 / AURORA'],glacier:['#b4f5ff','#4689ef','冰川 / GLACIER'],dusk:['#efa4cb','#9761ff','暮色 / DUSK']};
-let currentSpecies='iris',currentPalette='aurora',bloomDuration=3.8,paused=false,contextLost=false;
+let currentSpecies='iris',currentPalette='aurora',bloomDuration=5.2,paused=false,contextLost=false;
 function surface(a,u,v,len,width,lift){const w=Math.pow(Math.sin(Math.PI*u),.85)*width,r=.22+u*len;return new T.Vector3(r*Math.cos(a)-v*w*Math.sin(a),r*Math.sin(a)+v*w*Math.cos(a),lift+1.05*Math.sin(u*Math.PI)-.72*u*u+.36*v*v*Math.sin(u*Math.PI));}
 function makePetal(a,len,width,lift){const rows=30,cols=12,positions=[],indices=[];
 for(let i=0;i<=rows;i++)for(let j=0;j<=cols;j++)positions.push(...surface(a,i/rows,j/cols*2-1,len,width,lift).toArray());
@@ -150,12 +154,45 @@ function ring(r,color,opacity){const points=[];for(let i=0;i<=240;i++){const a=i
 const frame=new T.Group();frame.add(ring(3.53,'#6dc7c9',.24),ring(3.68,'#8c75ce',.17));
 const ticks=[];for(let i=0;i<120;i++){const a=i/120*Math.PI*2,r=i%10?3.58:3.5;ticks.push(Math.cos(a)*r,Math.sin(a)*r,-.6,Math.cos(a)*3.64,Math.sin(a)*3.64,-.6)}frame.add(new T.LineSegments(new T.BufferGeometry().setAttribute('position',new T.Float32BufferAttribute(ticks,3)),new T.LineBasicMaterial({color:'#6fd9d0',transparent:true,opacity:.24})));root.add(frame);
 const starPos=[];for(let i=0;i<500;i++){const a=i*2.399963,r=2+(i%101)*.068;starPos.push(Math.cos(a)*r,Math.sin(a)*r,-2-i%13*.28)}const stars=new T.Points(new T.BufferGeometry().setAttribute('position',new T.Float32BufferAttribute(starPos,3)),new T.PointsMaterial({color:'#779eaf',size:.017,transparent:true,opacity:.5}));scene.add(stars);
-// Shared glyph textures; transient materials are disposed after each bloom.
-const glyphs=['{','}','0','1',';','<','>','/','=','+','(',')'].map(char=>{const c=document.createElement('canvas');c.width=c.height=64;const ctx=c.getContext('2d');ctx.font='44px monospace';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#fff';ctx.fillText(char,32,34);return new T.CanvasTexture(c)});
+// Supernova bloom: one shared glyph atlas; each petal uses two batched draw calls.
+const atlasCanvas=document.createElement('canvas');atlasCanvas.width=512;atlasCanvas.height=128;
+const atlasContext=atlasCanvas.getContext('2d');atlasContext.font='bold 42px monospace';atlasContext.textAlign='center';atlasContext.textBaseline='middle';atlasContext.fillStyle='#fff';atlasContext.shadowColor='#fff';atlasContext.shadowBlur=5;
+Array.from('{}01<>/;+=[]λ∞∑*').forEach((char,i)=>atlasContext.fillText(char,(i%8)*64+32,Math.floor(i/8)*64+34));
+const glyphAtlas=new T.CanvasTexture(atlasCanvas);glyphAtlas.generateMipmaps=false;glyphAtlas.minFilter=T.LinearFilter;
+const glyphVertex=`attribute float glyph; attribute float size; uniform float pixels; uniform float energy; varying float vGlyph; varying float vTone;
+void main(){vGlyph=glyph;vTone=fract(glyph*.618);vec4 p=modelViewMatrix*vec4(position,1.);gl_Position=projectionMatrix*p;gl_PointSize=clamp(size*pixels*(1.+energy*.45)/max(1.,-p.z),1.,64.);}`;
+const glyphFragment=`uniform sampler2D atlas;uniform vec3 tint;uniform float opacity;varying float vGlyph;varying float vTone;
+void main(){vec2 cell=vec2(mod(vGlyph,8.),1.-floor(vGlyph/8.));vec2 uv=(cell+vec2(gl_PointCoord.x,1.-gl_PointCoord.y))/vec2(8.,2.);float ink=texture2D(atlas,uv).a;if(ink<.025)discard;gl_FragColor=vec4(mix(tint,vec3(.8,1.,.96),vTone*.42),ink*opacity);}`;
+const blastMaterial=new T.ShaderMaterial({transparent:true,depthWrite:false,depthTest:false,blending:T.AdditiveBlending,side:T.DoubleSide,
+uniforms:{phase:{value:0},strength:{value:1},cyan:{value:cyan},purple:{value:purple}},
+vertexShader:`varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+fragmentShader:`varying vec2 vUv;uniform float phase;uniform float strength;uniform vec3 cyan;uniform vec3 purple;
+void main(){vec2 p=vUv-.5;float r=length(p);float a=atan(p.y,p.x);float t=phase;
+float charge=smoothstep(0.,.13,t)*(1.-smoothstep(.16,.28,t));float flight=clamp((t-.15)/.46,0.,1.);float gate=smoothstep(.15,.19,t)*(1.-smoothstep(.45,.69,t));
+float radius=.035+pow(flight,.6)*.43;float wave=exp(-pow((r-radius)*130.,2.))+.2*exp(-abs(r-radius)*36.);
+float ring2=exp(-pow((r-radius*.76)*150.,2.))*(.35+.3*pow(abs(sin(a*24.+t*6.)),12.));
+float spokes=pow(abs(cos(a*16.+r*3.-t*2.)),70.)*exp(-r*7.)*.2;
+float halo=exp(-r*24.)*charge*.55;float flare=exp(-abs(p.y)*180.)*exp(-abs(p.x)*7.)*charge*.24;
+float returnGlow=sin(clamp((t-.78)/.22,0.,1.)*3.14159)*exp(-r*20.)*.3;
+vec3 color=mix(cyan,purple,.5+.5*sin(a+t*3.));float alpha=(halo+flare+(wave+ring2+spokes)*gate*.6+returnGlow)*strength;
+gl_FragColor=vec4(color,alpha*(1.-smoothstep(.46,.5,r)));}`});
+const blast=new T.Mesh(new T.PlaneGeometry(14,14),blastMaterial);blast.position.z=-.5;blast.visible=false;root.add(blast);
+const pulse={active:false,start:0,duration:0,full:false};
+const bloomCaption=document.createElement('div');bloomCaption.className='bloom-caption';bloomCaption.setAttribute('aria-hidden','true');bloomCaption.innerHTML='<small>CODEFLOWER / BLOOM SEQUENCE</small><span>Awaken.</span><i></i>';document.querySelector('.specimen').append(bloomCaption);
+const captionWord=bloomCaption.querySelector('span');
+const clamp01=x=>Math.min(1,Math.max(0,x)),ease5=x=>{x=clamp01(x);return x*x*x*(x*(x*6-15)+10)};
+function flightAt(p,t,out){
+ const launch=ease5((t-.13-p.delay)/.22),returning=ease5((t-.57-p.delay*.5)/(.43-p.delay*.5));
+ const spread=launch*(1-returning),turn=(.65+ease5((t-.22)/.5)*2.6)*spread*p.spin;
+ const angle=p.angle+turn,radius=p.radius+spread*p.reach,ca=Math.cos(angle),sa=Math.sin(angle);
+ out.set(p.origin.x+(ca*radius-p.origin.x)*(reduced?.12:1),p.origin.y+(sa*radius-p.origin.y)*(reduced?.12:1),p.origin.z+spread*(p.depth+Math.sin(turn+p.seed)*.65)*(reduced?.12:1));return spread;
+}
+function restorePetal(p){const d=p.userData;d.busy=false;p.position.set(0,0,0);p.rotation.set(0,0,0);p.scale.setScalar(1);d.fill.opacity=.045*d.gain;d.wireMat.opacity=.26*d.gain;d.edgeMat.opacity=.44*d.gain;d.fill.color.copy(d.color);d.wireMat.color.copy(d.color);d.edgeMat.color.copy(d.color);}
+function disposeBloom(a){root.remove(a.cloud);a.geometry.dispose();a.trailGeometry.dispose();a.ink.dispose();a.trailMaterial.dispose();restorePetal(a.petal);}
 let cycle=0,time=0,hover=null;
 const state=value=>{$('state').textContent=value};
 function updateRecord(){const s=species[currentSpecies],count=s.counts[0]+s.counts[1];$('record-name').textContent=s.name;$('record-petals').textContent=count+' / 双层';$('record-palette').textContent=palettes[currentPalette][2];$('record-blooms').textContent=String(cycle).padStart(3,'0');$('recipe').textContent="flower.create({\n  species: '"+currentSpecies+"',\n  petals: "+count+",\n  spectrum: '"+currentPalette+"'\n});";}
-function clearBlooms(){for(const a of animations){root.remove(a.cloud);a.materials.forEach(m=>m.dispose());}animations.length=0;}
+function clearBlooms(){for(const a of animations)disposeBloom(a);animations.length=0;pulse.active=false;blast.visible=false;core.scale.setScalar(1);core.material.opacity=.42;bloomCaption.classList.remove('active');}
 function selectSpecies(key,scroll=true){if(contextLost)return;clearBlooms();hover=null;for(const p of petals){root.remove(p);const geometries=new Set(),materials=new Set();p.traverse(o=>{if(o.geometry)geometries.add(o.geometry);if(o.material)materials.add(o.material)});geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());}petals.length=0;currentSpecies=key;$('species-select').value=key;const s=species[key];for(let layer=0;layer<2;layer++)for(let i=0;i<s.counts[layer];i++)makePetal(i/s.counts[layer]*Math.PI*2+(layer?.24:0),s.lengths[layer],s.widths[layer],layer?s.lift:0);
 $('specimen-badge').textContent='SPECIMEN '+s.id+' — '+s.title;document.querySelector('.top-label > span').textContent='FIG. 00'+(Object.keys(species).indexOf(key)+1)+' / '+s.latin;document.querySelector('.coordinates').lastChild.textContent='TOPOLOGY  '+petals.length+' PETALS · RADIAL';document.querySelector('.specimen').setAttribute('aria-label','可交互三维'+s.name+'标本');canvas.setAttribute('aria-label',s.name+'：拖动旋转，滚轮缩放；按 Enter 绽放，R 重置视角');
 document.querySelectorAll('[data-species]').forEach(b=>{const active=b.dataset.species===key;b.setAttribute('aria-pressed',active);b.querySelector('.selected').textContent=active?'观察中':''});updateRecord();state(paused?'GROWTH PAUSED':'SPECIMEN STABLE');$('cycle').textContent='CYCLE '+String(cycle).padStart(3,'0')+' / AWAITING INPUT';log("specimen.load('"+key+"');");bloomButton.disabled=paused;if(scroll)studio.scrollIntoView({behavior:reduced?'instant':'smooth'});}
@@ -163,14 +200,23 @@ document.querySelectorAll('[data-species]').forEach(b=>b.addEventListener('click
 $('species-select').addEventListener('change',e=>selectSpecies(e.target.value,false));
 function updateArtworkLabel(){const s=species[currentSpecies];$('artwork-watermark').textContent={iris:'Iris.',lotus:'Lotus.',aster:'Aster.'}[currentSpecies];$('artwork-number').textContent=s.id+'.00'+(Object.keys(species).indexOf(currentSpecies)+1);}
 $('species-select').addEventListener('change',updateArtworkLabel);document.querySelectorAll('[data-species]').forEach(b=>b.addEventListener('click',updateArtworkLabel));
-document.querySelectorAll('[data-palette]').forEach(b=>b.addEventListener('click',()=>{if(contextLost)return;currentPalette=b.dataset.palette;const colors=palettes[currentPalette];cyan.set(colors[0]);purple.set(colors[1]);petals.forEach(p=>{const d=p.userData;d.color.copy(cyan).lerp(purple,(Math.sin(d.a-.6)+1)*.5);[d.fill,d.wireMat,d.edgeMat].forEach(m=>m.color.copy(d.color))});animations.forEach(a=>a.materials.forEach(m=>m.color.copy(a.petal.userData.color)));document.querySelectorAll('[data-palette]').forEach(el=>el.setAttribute('aria-pressed',el===b));updateRecord();log("light.spectrum('"+currentPalette+"');");}));
+document.querySelectorAll('[data-palette]').forEach(b=>b.addEventListener('click',()=>{if(contextLost)return;currentPalette=b.dataset.palette;const colors=palettes[currentPalette];cyan.set(colors[0]);purple.set(colors[1]);petals.forEach(p=>{const d=p.userData;d.color.copy(cyan).lerp(purple,(Math.sin(d.a-.6)+1)*.5);[d.fill,d.wireMat,d.edgeMat].forEach(m=>m.color.copy(d.color))});animations.forEach(a=>{a.ink.uniforms.tint.value.copy(a.petal.userData.color);a.trailMaterial.color.copy(a.petal.userData.color)});document.querySelectorAll('[data-palette]').forEach(el=>el.setAttribute('aria-pressed',el===b));updateRecord();log("light.spectrum('"+currentPalette+"');");}));
 $('bloom-speed').addEventListener('input',e=>{bloomDuration=Number(e.target.value);$('duration-value').textContent=bloomDuration.toFixed(1)+' s';});
 $('pause').addEventListener('click',()=>{paused=!paused;$('pause').setAttribute('aria-pressed',paused);$('pause').textContent=paused?'▷ 继续生长':'Ⅱ 暂停生长';document.body.classList.toggle('is-paused',paused);$('live-label').textContent=paused?'Ⅱ PAUSED':'● LIVE';state(paused?'GROWTH PAUSED':animations.length?'BLOOMING':'SPECIMEN STABLE');});
-function bloom(petal){if(paused||contextLost||!petal||petal.userData.busy)return;const d=petal.userData;d.busy=true;cycle++;updateRecord();$('cycle').textContent='CYCLE '+String(cycle).padStart(3,'0')+' / REASSEMBLY';state('BLOOMING');log('petal['+String(d.id).padStart(2,'0')+'].compileToLight();');
-const cloud=new T.Group(),particles=[],materials=glyphs.map(map=>new T.SpriteMaterial({map,color:d.color,transparent:true,opacity:0,depthWrite:false,blending:T.AdditiveBlending}));
-for(let i=0;i<72;i++){const u=.08+.87*((i*.618034)%1),v=((i*.414214)%1)*1.8-.9,origin=surface(d.a,u,v,d.len,d.width,d.lift),a=i*2.399963;
-const offset=new T.Vector3(Math.cos(d.a)*(.5+u)+Math.cos(a)*.9,Math.sin(d.a)*(.5+u)+Math.sin(a)*.9,Math.sin(i*1.7)*1.4+.6);const sprite=new T.Sprite(materials[i%materials.length]);sprite.position.copy(origin);sprite.scale.setScalar(.085+i%4*.008);cloud.add(sprite);particles.push({sprite,origin,offset});}root.add(cloud);animations.push({petal,cloud,particles,materials,start:time,duration:bloomDuration});}
-function bloomAll(){if(animations.length)return;petals.forEach(bloom);}
+function bloom(petal,full=false){if(paused||contextLost||!petal||petal.userData.busy||(!full&&animations.length))return;
+if(!animations.length){Object.assign(pulse,{active:true,start:time,duration:bloomDuration,full});bloomCaption.classList.add('active');captionWord.textContent='Awaken.';}
+const d=petal.userData;d.busy=true;cycle++;updateRecord();$('cycle').textContent='CYCLE '+String(cycle).padStart(3,'0')+' / ENERGY RELEASE';state('BLOOMING');log('petal['+String(d.id).padStart(2,'0')+'].ignite();');
+const count=innerWidth<700?44:88,segments=innerWidth<700?3:5,cloud=new T.Group(),particles=[],positions=new Float32Array(count*3),trails=new Float32Array(count*segments*6),shades=new Float32Array(trails.length),glyphs=[],sizes=[];
+for(let i=0;i<count;i++){const u=.06+.9*((i*.618034)%1),v=((i*.414214)%1)*1.9-.95,origin=surface(d.a,u,v,d.len,d.width,d.lift),seed=i*2.399963+d.id;
+particles.push({origin,angle:Math.atan2(origin.y,origin.x),radius:Math.hypot(origin.x,origin.y),reach:1.2+(i%7)/7*2.2,depth:Math.sin(seed)*2.4,spin:i%5===0?-.55:1,delay:(i%11)/11*.08,seed});origin.toArray(positions,i*3);glyphs.push(i%16);sizes.push(.105+(i%5)*.022);
+for(let k=0;k<segments;k++)for(let e=0;e<2;e++){const n=(i*segments+k)*6+e*3,l=Math.pow(1-(k+e)/segments,1.6);shades.set([l,l,l],n);}}
+const geometry=new T.BufferGeometry();geometry.setAttribute('position',new T.BufferAttribute(positions,3).setUsage(T.DynamicDrawUsage));geometry.setAttribute('glyph',new T.Float32BufferAttribute(glyphs,1));geometry.setAttribute('size',new T.Float32BufferAttribute(sizes,1));
+const ink=new T.ShaderMaterial({uniforms:{atlas:{value:glyphAtlas},tint:{value:d.color.clone()},opacity:{value:0},pixels:{value:1},energy:{value:0}},vertexShader:glyphVertex,fragmentShader:glyphFragment,transparent:true,depthWrite:false,blending:T.AdditiveBlending});
+const points=new T.Points(geometry,ink);points.frustumCulled=false;cloud.add(points);
+const trailGeometry=new T.BufferGeometry();trailGeometry.setAttribute('position',new T.BufferAttribute(trails,3).setUsage(T.DynamicDrawUsage));trailGeometry.setAttribute('color',new T.BufferAttribute(shades,3));
+const trailMaterial=new T.LineBasicMaterial({color:d.color,vertexColors:true,transparent:true,opacity:0,depthWrite:false,blending:T.AdditiveBlending});const tails=new T.LineSegments(trailGeometry,trailMaterial);tails.frustumCulled=false;cloud.add(tails);root.add(cloud);
+animations.push({petal,cloud,particles,geometry,trailGeometry,ink,trailMaterial,positions,trails,segments,start:time,duration:bloomDuration});}
+function bloomAll(){if(animations.length||paused||contextLost)return;petals.forEach(p=>bloom(p,true));}
 bloomButton.addEventListener('click',bloomAll);resetButton.addEventListener('click',restoreView);
 $('dock-bloom').addEventListener('click',bloomAll);$('dock-reset').addEventListener('click',restoreView);
 canvas.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();bloomAll()}if(e.key.toLowerCase()==='r')restoreView()});
@@ -184,16 +230,52 @@ function resize(){const {width,height}=host.getBoundingClientRect();renderer.set
 new ResizeObserver(resize).observe(host);resize();
 let stageVisible=true;new IntersectionObserver(entries=>{stageVisible=entries[0].isIntersecting;},{rootMargin:'100px'}).observe(host);
 const smooth=x=>x*x*(3-2*x);let last=performance.now(),nextLog=3.2,sceneScroll=0;
+const flightPoint=new T.Vector3(),tailPoint=new T.Vector3(),whiteLight=new T.Color('#eafff8');
+function renderBloomEffects(){
+ const p=pulse.active?clamp01((time-pulse.start)/pulse.duration):1;
+ const expansion=ease5((p-.13)/.25)*(1-ease5((p-.65)/.35));
+ if(pulse.active){
+  blast.visible=!reduced;blastMaterial.uniforms.phase.value=p;blastMaterial.uniforms.strength.value=pulse.full?1:.35;
+  const charge=ease5(p/.13)*(1-ease5((p-.16)/.18));
+  core.scale.setScalar(1+(reduced?.1:.8)*charge);core.material.opacity=.42+charge*.3;
+  if(!reduced&&pulse.full){camera.position.multiplyScalar(1+expansion*.23);camera.updateMatrixWorld();frame.rotation.z+=expansion*.4;}
+  captionWord.textContent=p<.16?'Awaken.':p<.62?'Supernova.':'Rebirth.';bloomCaption.style.setProperty('--sequence',p);bloomCaption.style.setProperty('--energy',Math.sin(p*Math.PI));
+  if(!paused)state(p>.62?'REASSEMBLING':'BLOOMING');
+ }
+ for(let j=animations.length-1;j>=0;j--){
+  const a=animations[j],t=clamp01((time-a.start)/a.duration),d=a.petal.userData;
+  const charge=ease5(t/.13)*(1-ease5((t-.14)/.17));
+  const dissolved=ease5((t-.13)/.18)*(1-ease5((t-.74)/.26));
+  const alpha=ease5((t-.12)/.12)*(1-ease5((t-.86)/.14));
+  const compression=(reduced?0:1)*charge;
+  a.petal.scale.setScalar(1-compression*.12);a.petal.rotation.z=compression*.055*Math.sin(d.a);
+  d.fill.opacity=(.045+charge*(reduced?.02:.11))*d.gain*(1-dissolved);
+  d.wireMat.opacity=(.26+charge*(reduced?.08:.52))*d.gain*(1-dissolved);
+  d.edgeMat.opacity=(.44+charge*.35)*d.gain*(1-dissolved);
+  for(const m of [d.fill,d.wireMat,d.edgeMat])m.color.copy(d.color).lerp(whiteLight,charge*(reduced?.1:.58));
+  a.ink.uniforms.opacity.value=alpha*.95;a.ink.uniforms.energy.value=expansion;
+  a.ink.uniforms.pixels.value=host.clientHeight*renderer.getPixelRatio()/(2*Math.tan(T.MathUtils.degToRad(camera.fov*.5)));
+  a.trailMaterial.opacity=reduced?0:alpha*(.4+expansion*.24);
+  for(let i=0;i<a.particles.length;i++){
+   const particle=a.particles[i];flightAt(particle,t,flightPoint);flightPoint.toArray(a.positions,i*3);
+   for(let k=0;k<a.segments;k++){
+    const n=(i*a.segments+k)*6;
+    flightAt(particle,Math.max(0,t-k*.008),tailPoint);tailPoint.toArray(a.trails,n);
+    flightAt(particle,Math.max(0,t-(k+1)*.008),tailPoint);tailPoint.toArray(a.trails,n+3);
+   }
+  }
+  a.geometry.attributes.position.needsUpdate=true;a.trailGeometry.attributes.position.needsUpdate=true;
+  if(t>=1){disposeBloom(a);animations.splice(j,1);}
+ }
+ if(pulse.active&&!animations.length){pulse.active=false;blast.visible=false;core.scale.setScalar(1);core.material.opacity=.42;bloomCaption.classList.remove('active');state('SPECIMEN STABLE');$('cycle').textContent='CYCLE '+String(cycle).padStart(3,'0')+' / COMPLETE';log('// reborn from a thousand possibilities.');}
+}
 function render(now){const dt=Math.min((now-last)/1000,.05);last=now;if(!paused)time+=dt;updateCamera(dt,now);
 if(reduced)sceneScroll=0;else if(!paused)sceneScroll+=(scrollMotion.hero-sceneScroll)*(1-Math.exp(-6*dt));
 root.position.y=(reduced?0:Math.sin(time*.45)*.045)+sceneScroll*.22;root.rotation.set(-.35+sceneScroll*.22,.25+sceneScroll*.3,-.2-sceneScroll*.12);root.scale.setScalar(1-sceneScroll*.055);frame.rotation.z=-sceneScroll*.24;
 if(!reduced){core.rotation.y=time*.16;core.rotation.z=time*.08;pollen.rotation.z=-time*.045;stars.rotation.z=time*.003+sceneScroll*.055;stars.position.y=-sceneScroll*.45;}
 for(const p of petals){if(p.userData.busy)continue;const d=p.userData;d.wireMat.opacity=T.MathUtils.lerp(d.wireMat.opacity,(p===hover?.5:.26)*d.gain,.12);d.fill.opacity=T.MathUtils.lerp(d.fill.opacity,(p===hover?.09:.045)*d.gain,.12);}
-for(let j=animations.length-1;j>=0;j--){const a=animations[j],t=Math.min(1,(time-a.start)/a.duration),spread=t<.4?smooth(t/.4):1-smooth((t-.4)/.6),alpha=Math.min(1,t*9,(1-t)*9),d=a.petal.userData;
-d.fill.opacity=.045*d.gain*(1-alpha);d.wireMat.opacity=.26*d.gain*(1-alpha);d.edgeMat.opacity=.44*d.gain*(1-alpha);a.materials.forEach(m=>m.opacity=alpha*.85);
-for(const {sprite,origin,offset}of a.particles){sprite.position.copy(origin).addScaledVector(offset,spread*(reduced?.2:1));sprite.scale.setScalar(.095+spread*.035);}
-if(t>=1){root.remove(a.cloud);a.materials.forEach(m=>m.dispose());d.busy=false;d.fill.opacity=.045*d.gain;d.wireMat.opacity=.26*d.gain;d.edgeMat.opacity=.44*d.gain;animations.splice(j,1);if(!animations.length){state('SPECIMEN STABLE');$('cycle').textContent='CYCLE '+String(cycle).padStart(3,'0')+' / COMPLETE';log('// reassembled. still growing.');}}}
-bloomButton.disabled=$('dock-bloom').disabled=paused||animations.length>0;if(!paused&&animations.length&&animations.every(a=>(time-a.start)/a.duration>.4))state('REASSEMBLING');
+renderBloomEffects();
+bloomButton.disabled=$('dock-bloom').disabled=paused||animations.length>0;
 if(!reduced&&time>nextLog){log(code[Math.floor(time/3.2)%code.length]);nextLog=time+3.2;}if(stageVisible)renderer.render(scene,camera);}
 renderer.setAnimationLoop(render);document.addEventListener('visibilitychange',()=>{last=performance.now();renderer.setAnimationLoop(document.hidden||contextLost?null:render)});
 canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();contextLost=true;renderer.setAnimationLoop(null);$('loading').hidden=false;$('loading').textContent='图形上下文已中断，请刷新页面恢复。';bloomButton.disabled=resetButton.disabled=true;document.querySelectorAll('.specimen-card,.swatch,#bloom-speed,#pause,#species-select,#dock-bloom,#dock-reset').forEach(el=>el.disabled=true);state('RELOAD REQUIRED')});
