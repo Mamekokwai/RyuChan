@@ -1,6 +1,6 @@
 ---
 title: 惠普打印机打印双面卡片错位对不上（别勾 Fit picture to frame）
-description: HP 打印机打印双面卡片时正反两面错位、对不上？多半是打印设置里勾了 Fit picture to frame，或纸张放歪了。本文记录 HP Tank 599 的解决方法和打印参数建议。
+description: HP 打印机打印双面卡片正反两面错位？一句话解决：取消勾选 Fit picture to frame，并把纸放正。附打印参数建议（Quality 选 Normal、Paper type 选 Plain Paper）与现象图示。
 pubDate: 2026-08-29
 image: https://photo.nywerya.xyz/Obsidian/发布/注释/惠普打印机打印双面卡片错位对不上-cover.png
 draft: false
@@ -24,6 +24,37 @@ Release Platform:
 
 # 惠普打印机打印双面卡片错位对不上（别勾 Fit picture to frame）
 
+## ✅ 结论
+
+**打印时不要勾选 `Fit picture to frame`（适合图片到边框）。**
+
+如果取消后**正反还是对不上**，那就是**纸放歪了**——重新放正再打一次即可。
+
+## 🚀 怎么做
+
+1. 在打印设置里**取消勾选** `Fit picture to frame`
+2. 把纸放正，重新打印
+
+![](https://photo.nywerya.xyz/Obsidian/发布/注释/20260829-0206-17.3734210.gif)
+
+## ⚙️ 打印参数建议
+
+| 参数 | 建议 | 说明 |
+|-|-|-|
+| `Quality` | **Normal** | `Best` 颜色过深 |
+| `Paper type` | **Plain Paper** | 普通纸即可 |
+
+## 🔧 排查顺序
+
+1. **先查 `Fit picture to frame`** 是否被勾上 → 取消勾选
+2. 取消后仍错位 → **检查纸张是否放歪**
+3. 换好纸/取消勾选后重打，正反两面应完全重叠
+
+---
+---
+
+# 以下是现象说明（只想解决问题的可以到此为止）
+
 ## 现象
 
 打印机型号：**HP Tank 599**（驱动 580-590 series，Windows 11）。打印双面卡片时，**正反两面不能完美重叠**，导致裁切后出现瑕疵：
@@ -33,21 +64,6 @@ Release Platform:
 理想情况是两面**完全重叠**：
 
 ![](https://photo.nywerya.xyz/Obsidian/发布/注释/20260829-0203-52.9874980.gif)
-
-## 问题解决
-
-打印时**不要勾选 `Fit picture to frame`**（适合图片到边框）：
-
-![](https://photo.nywerya.xyz/Obsidian/发布/注释/20260829-0206-17.3734210.gif)
-
-如果正反还是对不上，那就是**纸放歪了**，或者又勾上了 `Fit picture to frame`——重新放纸再打一次即可。
-
-## 打印参数建议
-
-| 参数 | 建议 | 说明 |
-|-|-|-|
-| `Quality` | **Normal** | `Best` 颜色过深 |
-| `Paper type` | **Plain Paper** | 普通纸即可 |
 
 ## 小结
 

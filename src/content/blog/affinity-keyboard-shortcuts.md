@@ -24,7 +24,36 @@ Release Platform:
 
 > 来源：Affinity Help Center "Keyboard shortcuts for general editing"，适用 **Designer / Photo / Publisher** 全部工作室。以下为 **Windows** 键位。
 
-## 文档设置
+## ⚡ 最常用的 16 个（先记这些就够）
+
+| 操作 | 快捷键 |
+|-|--|
+| 撤销 / 重做 | `Ctrl+Z` / `Ctrl+Shift+Z` |
+| 复制 / 剪切 / 粘贴样式 | `Ctrl+C` / `Ctrl+X` / `Ctrl+Shift+V` |
+| 编组 / 取消编组 | `Ctrl+G` / `Ctrl+Shift+G` |
+| 复制所选 | `Ctrl+J` |
+| 转换为曲线（转曲） | `Ctrl+Enter` |
+| 移到最前 / 移到最后 | `Ctrl+Shift+]` / `Ctrl+Shift+[` |
+| 全选 / 取消选择 | `Ctrl+A` / `Ctrl+D` |
+| 保持宽高比缩放 | `Shift+拖角手柄` |
+| 从中心缩放 | `Ctrl+拖角手柄` |
+| 15° 间隔旋转 | `Shift+拖旋转手柄` |
+| 切换填充 / 描边 | `X` |
+| 互换填充 / 描边 | `Shift+X` |
+| 设为黑白 / 无填充 | `D` / `/` |
+| 反相 / 曲线 / 色阶 | `Ctrl+I` / `Ctrl+M` / `Ctrl+L` |
+| 微移 / 大步微移 | 方向键 / `Shift+方向键` |
+| 取消当前操作 | `Esc` |
+
+> ⚠️ **对齐操作（左/中/右、分布）默认没有快捷键**，需要自己设或开面板 —— 见文末 [「对齐操作」](#对齐操作-无默认快捷键)。
+>
+> 下面按功能分类给出全部快捷键。想直接查某一类，用右侧目录或 Ctrl+F。
+
+---
+
+## 📋 全部快捷键（按功能分组）
+
+### 文档设置
 
 | 操作 | 快捷键 |
 |-|--|
