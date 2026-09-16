@@ -2,7 +2,7 @@
 title: one-api 中转站搭建教程 — 聚合 API 赚差价
 description: 用 one-api 搭建自己的 AI API 中转站，聚合 DeepSeek/OpenAI/Claude，统一管理 Key，按量计费赚取差价。附 Cloudflare Workers 零成本起步方案。
 pubDate: 2026-06-12T13:20
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/OneAPI-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260612-2.png
 draft: false
 tags:
   - one-api

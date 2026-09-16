@@ -4,7 +4,7 @@ description: >-
   Affinity Designer / Photo / Publisher 通用编辑快捷键整理：文档设置、选择、
   变换、图层操作、颜色、混合模式、调整滤镜等，附对齐操作的自定义方法。
 pubDate: 2026-08-17
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/Affinity-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260819.png
 draft: false
 tags:
   - Affinity

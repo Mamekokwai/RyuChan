@@ -2,7 +2,7 @@
 title: N2N 虚拟局域网搭建 — 一键脚本 + 联机游戏实战
 description: 用 N2N 自建虚拟局域网，解决无法 IP 直连游戏的联机问题（以撒/饥荒等）。含一键部署脚本和服务端/客户端完整配置。
 pubDate: 2026-06-12T13:20
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/N2N-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260612.png
 draft: false
 tags:
   - N2N

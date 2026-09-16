@@ -2,7 +2,7 @@
 title: HP 打印机报错 0x000003e3（打印被中止）修复教程
 description: 打印报错 0x000003e3（I/O 操作已中止）？根因是队列用了「Microsoft IPP 类驱动程序」+ 指向失效的链路本地 IPv6 端口。照本文换成打印机 IPv4 地址 + 官方 HP 驱动即可；若换完端口又复发，附根治方法（禁用 WSD/IPP 自动发现设备并重建干净队列）。
 pubDate: 2026-08-19
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/HP打印机报错0x000003e3修复教程-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260819-2.png
 draft: false
 tags:
   - 打印机

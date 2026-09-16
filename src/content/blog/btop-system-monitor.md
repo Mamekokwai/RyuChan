@@ -2,7 +2,7 @@
 title: btop — 装完系统第一个 apt install 的终端资源监视器
 description: btop 是 htop 的终极进化版，C++ 重写的 TUI 系统监视器。实时展示 CPU/内存/磁盘/网络图表，鼠标可点，内置多套主题。
 pubDate: 2026-06-13T13:00
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/btop-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260613.png
 draft: false
 tags:
   - Linux

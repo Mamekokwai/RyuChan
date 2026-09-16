@@ -2,7 +2,7 @@
 title: 一键清除 WPS 看图与百度智能看图：拿回你的图片打开方式
 description: 下载即用：548 行 PowerShell 脚本，清掉 WPS 看图与百度智能看图，恢复图片默认打开方式，省下 300–500 MB。不碰软件本体、不动文档、不联网。附参数、退出码与 SHA256。
 pubDate: 2026-09-15
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/清除WPS看图与百度看图-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260915-2.png
 draft: false
 tags:
   - Windows

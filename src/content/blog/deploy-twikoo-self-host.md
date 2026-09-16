@@ -2,7 +2,7 @@
 title: 如何部署 Twikoo 评论到自己的服务器 (保姆级教程 2026)
 description: 从零部署 Twikoo 评论系统到自有服务器，涵盖 MongoDB、Docker、 Nginx 反代、前端接入、管理后台全流程。
 pubDate: 2026-05-29
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/Twikoo-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260531-2.png
 draft: false
 tags:
   - Twikoo

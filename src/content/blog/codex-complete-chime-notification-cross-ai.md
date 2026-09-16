@@ -2,7 +2,7 @@
 title: Codex 完成对话音效通知：跨 AI 配置教程
 description: 两步配置：让 Codex 在整轮对话真正结束时只播放一次 WAV 音效——只响应 agent-turn-complete，不等待播放结束、不弹播放器窗口。附可直接交给其他 AI 的通用配置提示词与排障。
 pubDate: 2026-09-02
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/Codex完成对话音效通知-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260902.png
 draft: false
 tags:
   - Codex

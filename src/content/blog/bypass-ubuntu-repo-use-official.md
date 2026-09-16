@@ -4,7 +4,7 @@ description: >-
   绕开 Ubuntu 保守的软件仓库，从官方源直装最新版——以 Nginx 为例，
   涵盖 apt pinning、GPG 密钥管理，附排雷指南。
 pubDate: 2026-05-31
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/添加官方仓库并跳过Ubuntu维护版本-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260601.png
 draft: false
 tags:
   - Ubuntu

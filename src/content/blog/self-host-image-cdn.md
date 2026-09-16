@@ -2,7 +2,7 @@
 title: 自建图床：Syncthing + Nginx 零成本图片 CDN
 description: 利用 Syncthing 实时同步 + Nginx 静态服务，把已有服务器变成个人图片 CDN。Obsidian 写作流程零改变，数据全在自己手里。
 pubDate: 2026-06-12T12:30
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/自建图床-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260612-4.png
 draft: false
 tags:
   - 图床

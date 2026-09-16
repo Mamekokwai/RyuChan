@@ -2,7 +2,7 @@
 title: CA51F2 SDK 分享 2025-12 版本
 description: 锦锐 CA51F2 芯片官方 SDK 开发资料免费分享，无需积分签到，点击即取。
 pubDate: 2026-08-13
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/CA51F2-SDK-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260813.png
 draft: false
 tags:
   - 嵌入式

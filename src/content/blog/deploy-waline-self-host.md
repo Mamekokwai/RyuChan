@@ -4,7 +4,7 @@ description: >-
   从零部署 Waline 评论系统到自有服务器，涵盖 Docker、SQLite、
   Nginx 反代、前端接入、管理后台全流程。
 pubDate: 2026-05-31
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/Waline-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260531-3.png
 draft: false
 tags:
   - Waline

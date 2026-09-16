@@ -2,7 +2,7 @@
 title: EmbedPix 嵌图匠：把图片精确转成单片机要的格式
 description: 下载即用：BMP 1–32 位、PNG、JPG、RGB565 原始数据与可直接入固件的 C 数组，并提供大小端、RGB/BGR、扫描方向与行对齐控制。本地工具，无账号、无云端、无常驻进程。
 pubDate: 2026-09-15
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/EmbedPix-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260915.png
 draft: false
 tags:
   - EmbedPix

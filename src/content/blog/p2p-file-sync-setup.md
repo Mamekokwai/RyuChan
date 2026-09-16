@@ -2,7 +2,7 @@
 title: Syncthing 部署与配置指南
 description: 开源 P2P 文件同步工具 Syncthing 的完整部署教程，涵盖 Nginx 反代、踩坑实录与诊断命令。
 pubDate: 2026-06-11T21:15
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/Syncthing-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260611.png
 draft: false
 tags:
   - Syncthing

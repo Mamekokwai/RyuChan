@@ -2,7 +2,7 @@
 title: Umami 网站统计部署指南 — 15 分钟自建隐私友好分析
 description: 不想把访客数据送给 Google？用 Umami 在自有服务器上部署网站分析，Docker 一把梭，Nginx 反代加 SSL，配合 RyuChan 模板展示全站 PV/UV 和单篇阅读量。
 pubDate: 2026-06-12T12:30
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/Umami-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260612-3.png
 draft: false
 tags:
   - Umami

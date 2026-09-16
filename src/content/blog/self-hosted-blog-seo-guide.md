@@ -4,7 +4,7 @@ description: >-
   自建博客搜索优化的手把手教程，覆盖 Sitemap、robots.txt、
   Google Search Console、内容 Checklist、站外引流。
 pubDate: 2026-06-02
-image: https://photo.nywerya.xyz/Obsidian/发布/注释/SEO-自建博客搜索优化实战-cover.png
+image: https://pic.nywerya.xyz/pic/%E6%B3%A8%E9%87%8A/%E5%8F%91%E5%B8%83-20260602.png
 draft: false
 tags:
   - SEO
