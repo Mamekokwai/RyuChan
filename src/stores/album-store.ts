@@ -198,10 +198,21 @@ export const useAlbumStore = create<AlbumStore>()(
       },
     }),
     {
-      name: 'album-store-v3',
+      // 换 key + version：vault 图片改由图床直链后，旧持久化数据里的地址已全部失效（404）。
+      // 不换 key 的话 merge 会一直让旧数据覆盖打包进来的新数据，用户刷新也无法恢复。
+      name: 'album-store-v4',
+      version: 4,
       partialize: (state) => ({ albums: state.albums }),
       merge: (persisted, current) => {
         const persistedAlbums = (persisted as { albums?: AlbumItem[] })?.albums
+
+        // 持久化数据仍指向已退役的图床主机 → 判为过期，回落到打包数据
+        const RETIRED_HOSTS = ['photo.nywerya.xyz']
+        const isStale = (a: AlbumItem[]) =>
+          a.some((album) => (album.photos ?? []).some((p) => RETIRED_HOSTS.some((h) => (p.src || '').includes(h))))
+        if (persistedAlbums && isStale(persistedAlbums)) {
+          return current
+        }
 
         // Use persisted data as the source of truth once the user has made edits.
         // Avoids duplicates when albums are renamed (old event name in defaults
