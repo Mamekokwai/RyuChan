@@ -11,7 +11,7 @@ tags:
 categories:
   - 教程
 slug: self-host-image-cdn
-cover: 发布/注释/自建图床-cover.png
+cover: E:\Pic\注释\发布-20260612-4.png
 summary: 利用 Syncthing 实时同步 + Nginx 静态服务搭建个人图床，写作流程零改变。
 type: tutorial
 original: "[[笔记/网络与服务器/自建图床-Syncthing+Nginx|自建图床-Syncthing+Nginx]]"

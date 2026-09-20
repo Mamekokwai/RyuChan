@@ -13,7 +13,7 @@ tags:
 categories:
   - 工具
 slug: embedpix-embedded-image-converter
-cover: 发布/注释/EmbedPix-cover.png
+cover: E:\Pic\注释\发布-20260915.png
 summary: 嵌入式 UI 开发的本地图片转换器：BMP 位深、RGB565 BIN、C 数组、行对齐与大小端控制，一个 Tauri 桌面应用搞定。
 type: tutorial
 Release Platform:

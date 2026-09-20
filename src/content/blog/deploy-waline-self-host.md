@@ -14,7 +14,7 @@ tags:
 categories:
   - 教程
 slug: deploy-waline-self-host
-cover: 发布/注释/Waline-cover.png
+cover: E:\Pic\注释\发布-20260531-3.png
 summary: 从零部署 Waline 评论系统到自有服务器，涵盖 Docker、SQLite、Nginx 反代、前端接入、管理后台全流程。
 type: tutorial
 original: "[[笔记/网络与服务器/Waline|Waline]]"

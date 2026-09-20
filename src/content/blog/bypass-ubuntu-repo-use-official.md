@@ -14,7 +14,7 @@ tags:
 categories:
   - 资源
 slug: bypass-ubuntu-repo-use-official
-cover: 发布/注释/添加官方仓库并跳过Ubuntu维护版本-cover.png
+cover: E:\Pic\注释\发布-20260601.png
 summary: 绕开 Ubuntu 保守的软件仓库，从官方源直装最新版——以 Nginx 为例，附排雷指南。
 type: tutorial
 original: "[[笔记/操作系统/Linux/Ubuntu/添加官方仓库并跳过Ubuntu维护版本|添加官方仓库并跳过Ubuntu维护版本]]"

@@ -12,7 +12,7 @@ tags:
 categories:
   - 教程
 slug: wireguard-mesh-network
-cover: 发布/注释/WireGuard-mesh-cover.png
+cover: E:\Pic\注释\WireGuard-mesh-cover.png
 summary: 一台公网服务器当 hub，把 NAT 后的台式与笔记本组进 10.10.0.0/24：7 步顺序 + 5 级验证 + 7 个会静默失败的坑。
 type: tutorial
 Release Platform:

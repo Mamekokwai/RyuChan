@@ -13,7 +13,7 @@ tags:
 categories:
   - 速查
 slug: affinity-keyboard-shortcuts
-cover: 发布/注释/Affinity-cover.png
+cover: E:\Pic\注释\发布-20260819.png
 summary: Affinity 全工作室通用编辑快捷键速查表，含对齐操作设置方法。
 type: cheatsheet
 Release Platform:

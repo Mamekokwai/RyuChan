@@ -13,7 +13,7 @@ tags:
 categories:
   - 教程
 slug: hp-printer-error-0x000003e3-fix
-cover: 发布/注释/HP打印机报错0x000003e3修复教程-cover.png
+cover: E:\Pic\注释\发布-20260819-2.png
 summary: 打印报错 0x000003e3？换 IPv4 端口 + 官方 HP 驱动即可；换完又复发时，禁用 WSD/IPP 自动发现设备并重建干净队列根治。
 type: tutorial
 Release Platform:

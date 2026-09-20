@@ -12,7 +12,7 @@ tags:
 categories:
   - 教程
 slug: codex-complete-chime-notification-cross-ai
-cover: 发布/注释/Codex完成对话音效通知-cover.png
+cover: E:\Pic\注释\发布-20260902.png
 summary: 让 Codex 在整轮对话结束时播放一次 WAV 音效，附可交给任意 AI 的通用配置提示词。
 type: tutorial
 Release Platform:

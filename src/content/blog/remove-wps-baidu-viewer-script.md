@@ -13,7 +13,7 @@ tags:
 categories:
   - 工具
 slug: remove-wps-baidu-viewer-script
-cover: 发布/注释/清除WPS看图与百度看图-cover.png
+cover: E:\Pic\注释\发布-20260915-2.png
 summary: 下载即用：清掉 WPS 看图与百度智能看图，恢复图片默认打开方式，省下 300–500 MB。
 type: tutorial
 Release Platform:

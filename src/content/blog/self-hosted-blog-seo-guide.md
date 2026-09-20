@@ -13,7 +13,7 @@ tags:
 categories:
   - 教程
 slug: self-hosted-blog-seo-guide
-cover: 发布/注释/SEO-自建博客搜索优化实战-cover.png
+cover: E:\Pic\注释\发布-20260602.png
 summary: 自建博客搜索优化的手把手教程，不提废话，做完就有效。Astro / Hexo / Hugo 通用。
 type: tutorial
 original: "[[笔记/网络与服务器/SEO-自建博客搜索优化实战|SEO-自建博客搜索优化实战]]"

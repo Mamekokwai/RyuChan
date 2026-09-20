@@ -12,7 +12,7 @@ tags:
 categories:
   - 教程
 slug: ca51f2-sdk-share
-cover: 发布/注释/CA51F2-SDK-cover.png
+cover: E:\Pic\注释\发布-20260813.png
 summary: 锦锐 CA51F2 芯片官方 SDK 免费分享，无需积分签到，点击即取。
 type: tutorial
 original: "[[发布/CA51F2_SDK分享2025-12版本|CA51F2 SDK 分享 2025-12 版本]]"

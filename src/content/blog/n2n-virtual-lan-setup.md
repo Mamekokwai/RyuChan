@@ -12,7 +12,7 @@ tags:
 categories:
   - 教程
 slug: n2n-virtual-lan-setup
-cover: 发布/注释/N2N-cover.png
+cover: E:\Pic\注释\发布-20260612.png
 summary: 用 N2N 自建虚拟局域网，解决无法 IP 直连游戏的联机问题，含一键部署脚本和服务端/客户端完整配置。
 type: tutorial
 original: "[[笔记/网络与服务器/虚拟局域网N2N|虚拟局域网N2N]]"

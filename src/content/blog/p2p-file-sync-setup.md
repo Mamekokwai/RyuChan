@@ -11,7 +11,7 @@ tags:
 categories:
   - 教程
 slug: p2p-file-sync-setup
-cover: 发布/注释/Syncthing-cover.png
+cover: E:\Pic\注释\发布-20260611.png
 summary: Syncthing 开源 P2P 文件同步工具的完整部署教程，含 Nginx 反代配置与踩坑实录。
 type: tutorial
 original: "[[笔记/网络与服务器/Syncthing|Syncthing]]"

@@ -12,7 +12,7 @@ tags:
 categories:
   - 教程
 slug: deploy-twikoo-self-host
-cover: 发布/注释/Twikoo-cover.png
+cover: E:\Pic\注释\发布-20260531-2.png
 summary: 从零部署 Twikoo 评论系统到自有服务器，涵盖 MongoDB、Docker、Nginx 反代、前端接入全流程。
 type: tutorial
 original: "[[笔记/网络与服务器/Twikoo|Twikoo]]"

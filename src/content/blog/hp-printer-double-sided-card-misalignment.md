@@ -12,7 +12,7 @@ tags:
 categories:
   - 经验
 slug: hp-printer-double-sided-card-misalignment
-cover: 发布/注释/惠普打印机打印双面卡片错位对不上-cover.png
+cover: E:\Pic\注释\发布-20260829-2.png
 summary: 双面卡片打印正反对不上？别勾 Fit picture to frame，检查纸是否放歪；Quality 选 Normal、Paper type 选 Plain Paper。
 type: tutorial
 model: HP Tank 599
