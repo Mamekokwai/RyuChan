@@ -131,7 +131,7 @@ user:
   name: Nywerya
   description: 喜欢音乐,绘画,ACG,编程,硬件,设计,建模,东方Project
   site: https://blog.nywerya.xyz/
-  avatar: /profile.png
+  avatar: https://pic.nywerya.xyz/pic/profile.jpg
   title_image: /logo.png
   qr_wechat: /WeChat.jpg
   qr_alipay: /Alipay.jpg
